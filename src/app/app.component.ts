@@ -7,10 +7,13 @@ import {
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
   imports: [
     CommonModule,
     RouterOutlet,
@@ -18,9 +21,8 @@ import { RouterOutlet } from '@angular/router';
     TuiDialogModule,
     TuiAlertModule,
     TuiButtonModule,
+    TopBarComponent,
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   onClick(arg0: string) {
