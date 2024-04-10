@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="w-full flex flex-col gap-2">
+  <section class="flex flex-col align-center content-center items-center">
+    <img class="w-6/12" src="http://imageshack.com/a/img922/3783/oyvsRd.png" />
+    <span class="text-xl text-yellow-400 z-10 -mt-4">SHOP</span>
+  </section>
+
+  <article>
+    <div>
+      <tui-carousel
+        [duration]="4000"
+        [(index)]="carouselCurrentIndex"
+        [itemsCount]="3"
+        [draggable]="true"
+      >
+        <ng-container *ngFor="let item of items; let i = index">
+          <div *tuiItem alt="" draggable="false">{{ item.name }}</div>
+        </ng-container></tui-carousel
+      >
+    </div>
+  </article>
+</div>
