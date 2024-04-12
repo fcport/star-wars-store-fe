@@ -1,1 +1,43 @@
-<p>product-card works!</p>
+<div class="flex card text-white flex-col h-72 w-48 justify-between">
+  <section class="flex flex-col px-2" #header>
+    <p class="text-lg">{{ product().name }}</p>
+  </section>
+  <section class="flex flex-col" #image>
+    <img
+      src="{{ '/assets/vehicles/' + product().objectId + '.jpg' }}"
+      alt="product_image"
+      class="h-32"
+    />
+  </section>
+  <section class="flex flex-col px-2 gap-1" #info>
+    <div class="flex flex-row gap-2">
+      <tui-chip
+        size="xs"
+        appearance="{{ randomStockStatus() | stockStatusAppearance }}"
+      >
+        <span class="text-white">{{ randomStockStatus() | stockStatus }}</span>
+      </tui-chip>
+    </div>
+    <div>
+      @if(product().costInCredits){ Price:
+      <strong>{{ product().costInCredits! | currencyCredits }}</strong>
+      }@else {
+      <button tuiButton type="button" size="xs" appearance="accent">
+        {{ "Ask for a quote" }}
+      </button>
+
+      }
+    </div>
+  </section>
+  <section class="p-2 w-full" #footer>
+    <button
+      tuiButton
+      appearance="floating"
+      type="button"
+      size="s"
+      class="w-full"
+    >
+      Details
+    </button>
+  </section>
+</div>

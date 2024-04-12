@@ -4,17 +4,24 @@
     <span class="text-xl text-yellow-400 z-10 -mt-4">SHOP</span>
   </section>
 
-  <article>
+  <article class="my-3">
     <div>
+      @if(vehiclesCarousel() && vehiclesCarousel()!.length > 0){ }
       <tui-carousel
         [duration]="4000"
         [(index)]="carouselCurrentIndex"
         [itemsCount]="3"
         [draggable]="true"
       >
-        <ng-container *ngFor="let item of items; let i = index">
-          <div *tuiItem alt="" draggable="false">{{ item.name }}</div>
-        </ng-container></tui-carousel
+        @for( vehicle of vehiclesCarousel(); track vehicle.objectId){
+        <ng-container>
+          <app-product-card
+            class="m-auto"
+            *tuiItem
+            draggable="false"
+            [product]="vehicle"
+          ></app-product-card> </ng-container
+        >}</tui-carousel
       >
     </div>
   </article>

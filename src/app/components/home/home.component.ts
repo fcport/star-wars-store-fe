@@ -1,16 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TuiCarouselModule } from '@taiga-ui/kit';
+import { ProductCardComponent } from '../product-card/product-card.component';
+import { VehiclesService } from '../../services/vehicles.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, TuiCarouselModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
+  imports: [CommonModule, TuiCarouselModule, ProductCardComponent],
 })
 export class HomeComponent {
   carouselCurrentIndex: number = 0;
+  vehicleService = inject(VehiclesService);
+  vehiclesCarousel = this.vehicleService.vehiclesHome;
 
   items = [
     {

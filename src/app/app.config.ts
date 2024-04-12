@@ -5,10 +5,12 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
 import { TuiAlertModule, TuiDialogModule, TuiRootModule } from '@taiga-ui/core';
 import { TuiPushModule } from '@taiga-ui/kit';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    provideHttpClient(),
     provideAnimations(),
     importProvidersFrom(
       TuiRootModule,
