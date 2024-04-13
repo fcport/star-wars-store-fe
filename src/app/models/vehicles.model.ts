@@ -1,22 +1,22 @@
 import { Pilots, Films } from './relations.model';
 
 export interface Vehicle {
-  objectId: string;
-  consumables: string;
-  name: string;
   cargoCapacity: number;
-  passengers: number;
-  maxAtmospheringSpeed: any;
-  crew: number;
-  length: number;
-  model: string;
+  consumables: string;
   costInCredits: number;
-  manufacturer: string;
-  MGLT: number;
-  starshipClass: string;
-  hyperdriveRating: number;
   createdAt: string;
-  updatedAt: string;
-  pilots: Pilots;
+  crew: number;
   films: Films;
+  hyperdriveRating: number;
+  length: number;
+  manufacturer: string;
+  maxAtmospheringSpeed: any;
+  MGLT: number;
+  model: string;
+  name: string;
+  objectId: string;
+  passengers: number;
+  pilots: Pilots;
+  starshipClass: string;
+  updatedAt: string;
 }

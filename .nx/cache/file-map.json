@@ -42,483 +42,531 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "src/app/services/events.service.ts",
-        "hash": "13462816790399661592"
-      },
-      {
-        "file": "src/assets/starships/zfyE9VfkZj.jpg",
-        "hash": "17931998504886181015"
-      },
-      {
-        "file": "src/app/components/cart/cart.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/app.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "6686520031028425313"
-      },
-      {
-        "file": "angular.json",
-        "hash": "8578361604058249829"
-      },
-      {
-        "file": "src/app/models/vehicles.model.ts",
-        "hash": "2006988418766851329"
-      },
-      {
-        "file": "src/app/components/home/home.component.ts",
-        "hash": "12103169001601144881"
-      },
-      {
-        "file": "src/assets/starsbg.jpg",
-        "hash": "7911260797941926377"
-      },
-      {
-        "file": "src/assets/vehicles/NdKhSWkcGj.jpg",
-        "hash": "9427440837754596829"
-      },
-      {
-        "file": "src/assets/vehicles/Ai2rkPnjvF.jpg",
-        "hash": "8519841396497148845"
-      },
-      {
-        "file": "tailwind.config.js",
-        "hash": "15837075864296032885"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "17038929134016848735"
-      },
-      {
-        "file": "src/assets/vehicles/zPueYdAR01.jpg",
-        "hash": "1003484117425787929"
-      },
-      {
-        "file": "src/app/components/vehicles/vehicles.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/assets/vehicles/AkwpyZDVub.jpg",
-        "hash": "2365921318730450949"
-      },
-      {
-        "file": "src/app/components/starships/starships.component.ts",
-        "hash": "12713572145525542603"
-      },
-      {
-        "file": "src/assets/vehicles/DJIm9mYksz.jpg",
-        "hash": "932219734042640423"
-      },
-      {
-        "file": "src/assets/vehicles/rhIDTEgYLy.jpg",
-        "hash": "16273680348277142861"
-      },
-      {
-        "file": "src/assets/starships/nYhnGcgBDc.jpg",
-        "hash": "9270622213532942774"
-      },
-      {
-        "file": "src/assets/vehicles/eC9Nji4J6z.jpg",
-        "hash": "12224398872833998101"
-      },
-      {
-        "file": "src/app/services/vehicles.service.spec.ts",
-        "hash": "5240033519813788887"
-      },
-      {
-        "file": "src/app/components/events/events.component.ts",
-        "hash": "4260588963391911849"
-      },
-      {
-        "file": "src/assets/starships/ZwoZE4IXAr.jpg",
-        "hash": "12679188924365431280"
-      },
-      {
-        "file": "src/app/services/starships.service.ts",
-        "hash": "12248526755297253152"
-      },
-      {
-        "file": "src/assets/starships/SmAGL2YRes.jpg",
-        "hash": "1336985987219826057"
-      },
-      {
-        "file": "src/assets/starships/PzM6RB4tW9.jpg",
-        "hash": "9670813803646760113"
-      },
-      {
-        "file": "src/favicon.ico",
-        "hash": "3988961587069885523"
-      },
-      {
-        "file": "src/app/app.config.ts",
-        "hash": "1996302902760300300"
-      },
-      {
-        "file": "src/assets/vehicles/KVXGWeGIij.jpg",
-        "hash": "17208719031238733659"
-      },
-      {
-        "file": "src/app/components/vehicles/vehicles.component.ts",
-        "hash": "11482975593157038086"
-      },
-      {
-        "file": "src/assets/vehicles/RG7c1jYBpa.jpg",
-        "hash": "14997984563868597872"
-      },
-      {
-        "file": "src/assets/starships/kSnCBuvjnO.jpg",
-        "hash": "11200158655511474781"
-      },
-      {
-        "file": "src/app/components/vehicles/vehicles.component.spec.ts",
-        "hash": "3712782120243788841"
-      },
-      {
-        "file": "src/app/services/starships.service.spec.ts",
-        "hash": "11163400861549584287"
-      },
-      {
-        "file": "src/assets/vehicles/na3XbtzcDN.jpg",
-        "hash": "4526206940995539764"
-      },
-      {
-        "file": "src/assets/vehicles/f1oyRd3bJt.jpg",
-        "hash": "2364213588710491824"
-      },
-      {
-        "file": "src/assets/vehicles/aoewlvkIz9.jpg",
-        "hash": "17625882898624082904"
-      },
-      {
-        "file": "src/assets/starships/5q1xW3G5MP.jpg",
-        "hash": "11638291321352837125"
-      },
-      {
-        "file": "src/assets/starships/eC4XhsytIo.jpg",
-        "hash": "10074422683299792765"
-      },
-      {
-        "file": "src/assets/starships/n18UV3HGbg.jpg",
-        "hash": "14339645051024750552"
-      },
-      {
-        "file": "src/assets/vehicles/WsfCvLenTA.jpg",
-        "hash": "17930016019292457853"
-      },
-      {
-        "file": "src/styles.scss",
-        "hash": "6349902076832058990"
-      },
-      {
-        "file": "src/app/models/relations.model.ts",
-        "hash": "3605419187178947797"
-      },
-      {
-        "file": "src/app/components/product-card/product-card.component.html",
-        "hash": "15840303171553490632"
-      },
-      {
-        "file": "src/app/services/cart.service.ts",
-        "hash": "1545232653719787815"
-      },
-      {
-        "file": "src/app/models/response.model.ts",
-        "hash": "14078423320101836663"
-      },
-      {
-        "file": "src/assets/starships/nY2fTXX1F1.jpg",
-        "hash": "10903014932410841867"
-      },
-      {
-        "file": "src/assets/starships/Or6puNLEn5.jpg",
-        "hash": "674891959619534419"
-      },
-      {
-        "file": "src/assets/vehicles/KMVlBMNvE4.jpg",
-        "hash": "16291819312152133839"
-      },
-      {
-        "file": "src/assets/starships/I7KA16svWR.jpg",
-        "hash": "12673412524697992311"
-      },
-      {
-        "file": "src/app/services/vehicles.service.ts",
-        "hash": "8300190901853927721"
-      },
-      {
-        "file": "src/assets/starships/mYHlk0khPd.jpg",
-        "hash": "11028134739086325446"
-      },
-      {
-        "file": "src/app/components/cart/cart.component.html",
-        "hash": "4466039197836664307"
-      },
-      {
-        "file": "src/assets/vehicles/8cPVBOgBwJ.jpg",
-        "hash": "8781478476799436335"
-      },
-      {
-        "file": "src/assets/vehicles/eNPTgZTlWE.jpg",
-        "hash": "4921989891934031203"
-      },
-      {
-        "file": "src/assets/starships/p5HhbwwBGu.jpg",
-        "hash": "11892245229551614429"
-      },
-      {
-        "file": "src/assets/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/components/past-orders/past-orders.component.html",
-        "hash": "5983223017507875372"
-      },
-      {
-        "file": "src/app/components/events/events.component.spec.ts",
-        "hash": "13072315391694157511"
-      },
-      {
-        "file": "src/assets/starships/xgGROzsSND.jpg",
-        "hash": "2627489268846700225"
-      },
-      {
-        "file": "src/assets/vehicles/VYcFeVcevK.jpg",
-        "hash": "12263190108188147385"
-      },
-      {
-        "file": "src/app/app.routes.ts",
-        "hash": "13625615202127698542"
-      },
-      {
-        "file": "package.json",
-        "hash": "6728320236581190032"
-      },
-      {
-        "file": "src/assets/vehicles/eBd6n35xfU.jpg",
-        "hash": "10013325842888706511"
-      },
-      {
-        "file": "src/assets/starships/7bbrEEnPp3.jpg",
-        "hash": "6881631942736391331"
-      },
-      {
-        "file": "src/assets/starships/udnaqe2L4V.jpg",
-        "hash": "12207621605812192270"
-      },
-      {
-        "file": "src/assets/vehicles/pCVeRYzs6x.jpg",
-        "hash": "10884549345946728134"
-      },
-      {
-        "file": "src/assets/vehicles/pMwZsyHn9F.jpg",
-        "hash": "15264029808472862232"
-      },
-      {
-        "file": "src/assets/starships/isut9lrQGD.jpg",
-        "hash": "2369408432437613675"
-      },
-      {
-        "file": "src/app/app.component.ts",
-        "hash": "14379049911083826740"
-      },
-      {
-        "file": "src/app/components/constants/keys.ts",
-        "hash": "12421114561114041117"
-      },
-      {
-        "file": "src/app/common/pipes/stock-status.pipe.ts",
-        "hash": "9784339512943770532"
-      },
-      {
-        "file": "src/assets/vehicles/d8vCtlRaAB.jpg",
-        "hash": "3643141619789179320"
-      },
-      {
-        "file": "src/assets/vehicles/teHFkyAqy0.jpg",
-        "hash": "5703126246980279632"
-      },
-      {
-        "file": "src/app/components/past-orders/past-orders.component.spec.ts",
-        "hash": "3692322623561765849"
-      },
-      {
-        "file": "src/assets/starships/ERk3O2ELin.jpg",
-        "hash": "7755325340048820093"
-      },
-      {
-        "file": "src/app/components/home/home.component.spec.ts",
-        "hash": "5533293743300657749"
-      },
-      {
-        "file": "src/assets/vehicles/I7hL5RqIOf.jpg",
-        "hash": "17012769144745481441"
-      },
-      {
-        "file": "src/app/components/top-bar/top-bar.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/assets/vehicles/2RMOc7zzkj.jpg",
-        "hash": "3024648780643780613"
-      },
-      {
-        "file": "src/assets/vehicles/iJreBMeM4k.jpg",
-        "hash": "9305804904503067502"
-      },
-      {
-        "file": "src/assets/starships/GLTYEk8zyL.jpg",
-        "hash": "6501405875706479795"
-      },
-      {
-        "file": "src/app/components/events/events.component.html",
-        "hash": "4777772042029771368"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "13044518069027839699"
-      },
-      {
-        "file": "src/assets/vehicles/QPQRVV8W2K.jpg",
-        "hash": "13633571505471876955"
-      },
-      {
-        "file": "src/assets/vehicles/SLxC6CPcEL.jpg",
-        "hash": "7252354867395772634"
-      },
-      {
-        "file": "src/app/app.component.spec.ts",
-        "hash": "3481970758686926472"
-      },
-      {
-        "file": "src/assets/starships/Dp5YCEIXR3.jpg",
-        "hash": "3199379257788583704"
-      },
-      {
-        "file": "src/app/common/pipes/currency-credits.pipe.spec.ts",
-        "hash": "2350974418246405870"
-      },
-      {
-        "file": "src/app/common/pipes/stock-status-appearance.pipe.ts",
-        "hash": "882230774022507175"
-      },
-      {
-        "file": "src/assets/starships/xrnyX0HUG9.jpg",
-        "hash": "6882073609340896549"
-      },
-      {
-        "file": "src/assets/vehicles/GKADuoyFth.jpg",
-        "hash": "14171654539613944025"
-      },
-      {
-        "file": "src/app/app.component.html",
-        "hash": "14264061792476773873"
-      },
-      {
-        "file": "src/app/components/past-orders/past-orders.component.ts",
-        "hash": "1617259488379226454"
-      },
-      {
-        "file": "src/app/components/cart/cart.component.ts",
-        "hash": "12248715585178406198"
-      },
-      {
-        "file": "src/app/components/top-bar/top-bar.component.html",
-        "hash": "9641422573683676551"
+        "file": "README.md",
+        "hash": "17172603412179593399"
       },
       {
         "file": ".vscode/extensions.json",
         "hash": "5331566439708925252"
       },
       {
-        "file": "db.json",
-        "hash": "8552389738002061553"
+        "file": "src/app/app.component.ts",
+        "hash": "14379049911083826740"
       },
       {
-        "file": "src/app/components/home/home.component.scss",
-        "hash": "3244421341483603138"
+        "file": "src/assets/starships/F5l2KSa4Xk.jpg",
+        "hash": "10720262977338995696"
       },
       {
-        "file": "src/app/components/past-orders/past-orders.component.scss",
-        "hash": "3244421341483603138"
+        "file": "src/assets/vehicles/I7hL5RqIOf.jpg",
+        "hash": "17012769144745481441"
       },
       {
-        "file": "src/assets/starships/RTHryjQp6d.jpg",
-        "hash": "7352079150491087870"
+        "file": "src/assets/vehicles/na3XbtzcDN.jpg",
+        "hash": "4526206940995539764"
       },
       {
-        "file": "src/assets/starships/PcHTkdaQZM.jpg",
-        "hash": "660602011656744120"
+        "file": "src/favicon.ico",
+        "hash": "3988961587069885523"
       },
       {
-        "file": "src/assets/vehicles/8deZC3YjGb.jpg",
-        "hash": "8797367750938525987"
+        "file": "src/app/components/constants/keys.ts",
+        "hash": "12421114561114041117"
       },
       {
-        "file": "src/assets/starships/9lTVqvWu97.jpg",
-        "hash": "13803151471363573365"
+        "file": "src/app/components/ui/banner/banner.component.scss",
+        "hash": "17721944316433808809"
       },
       {
-        "file": "src/app/common/pipes/stock-status.pipe.spec.ts",
-        "hash": "4654525929077794168"
+        "file": "src/app/components/product-card/product-card.component.ts",
+        "hash": "15482329417153836714"
       },
       {
-        "file": "src/assets/vehicles/rKF6mcUesc.jpg",
-        "hash": "14223090773484959833"
+        "file": "src/app/app.component.spec.ts",
+        "hash": "3481970758686926472"
       },
       {
-        "file": "src/app/components/top-bar/top-bar.component.spec.ts",
-        "hash": "4583742922324058593"
+        "file": "src/assets/starships/n18UV3HGbg.jpg",
+        "hash": "14339645051024750552"
       },
       {
-        "file": "src/assets/starships/bHPFB3mOuL.jpg",
-        "hash": "438409633119232388"
+        "file": "src/assets/starships/deSSraPLXL.jpg",
+        "hash": "14083942735981781365"
+      },
+      {
+        "file": "src/assets/vehicles/teHFkyAqy0.jpg",
+        "hash": "5703126246980279632"
+      },
+      {
+        "file": "src/assets/starships/isut9lrQGD.jpg",
+        "hash": "2369408432437613675"
       },
       {
         "file": "src/app/components/cart/cart.component.spec.ts",
         "hash": "3777293170814146151"
       },
       {
+        "file": "src/main.ts",
+        "hash": "4927504514031276065"
+      },
+      {
+        "file": "src/assets/vehicles/AkwpyZDVub.jpg",
+        "hash": "2365921318730450949"
+      },
+      {
+        "file": "src/assets/vehicles/2RMOc7zzkj.jpg",
+        "hash": "3024648780643780613"
+      },
+      {
+        "file": "src/assets/starships/PcHTkdaQZM.jpg",
+        "hash": "660602011656744120"
+      },
+      {
+        "file": "src/app/components/top-bar/top-bar.component.ts",
+        "hash": "206408275255942744"
+      },
+      {
+        "file": "src/assets/starships/ERk3O2ELin.jpg",
+        "hash": "7755325340048820093"
+      },
+      {
+        "file": "src/app/components/product-card/product-card.component.spec.ts",
+        "hash": "2745372088444382232"
+      },
+      {
         "file": "src/assets/starships/GyKsQsPAiW.jpg",
         "hash": "2765711733070763118"
       },
       {
-        "file": "src/assets/vehicles/AtFEKIwfzK.jpg",
-        "hash": "7493874412883133837"
+        "file": "src/app/components/events/events.component.ts",
+        "hash": "4260588963391911849"
       },
       {
-        "file": "src/app/models/starship.model.ts",
-        "hash": "3238010742610817401"
+        "file": "src/assets/starships/7bbrEEnPp3.jpg",
+        "hash": "6881631942736391331"
       },
       {
-        "file": "tsconfig.json",
-        "hash": "1960851932325857735"
+        "file": "src/app/components/vehicles/vehicles.component.scss",
+        "hash": "3244421341483603138"
       },
       {
-        "file": "src/app/common/pipes/stock-status-appearance.pipe.spec.ts",
-        "hash": "1691521310482046260"
+        "file": "src/app/components/ui/banner/banner.component.html",
+        "hash": "3592407118438095778"
       },
       {
-        "file": "src/assets/vehicles/utGgMTDozL.jpg",
-        "hash": "17719009916061554800"
+        "file": "src/assets/vehicles/rhIDTEgYLy.jpg",
+        "hash": "16273680348277142861"
       },
       {
-        "file": ".vscode/tasks.json",
-        "hash": "5336636969995539451"
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
       },
       {
-        "file": "src/app/services/past-orders.service.ts",
-        "hash": "6205132034110923619"
+        "file": "src/assets/starships/mYHlk0khPd.jpg",
+        "hash": "11028134739086325446"
+      },
+      {
+        "file": "src/assets/vehicles/eC9Nji4J6z.jpg",
+        "hash": "12224398872833998101"
+      },
+      {
+        "file": "src/app/common/pipes/stock-status-appearance.pipe.ts",
+        "hash": "882230774022507175"
+      },
+      {
+        "file": "src/assets/starships/xgGROzsSND.jpg",
+        "hash": "2627489268846700225"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "17337579397915052279"
+      },
+      {
+        "file": "src/assets/starships/QjOyk3CH8K.jpg",
+        "hash": "10059114572163137564"
+      },
+      {
+        "file": "src/assets/vehicles/Ai2rkPnjvF.jpg",
+        "hash": "8519841396497148845"
+      },
+      {
+        "file": "src/assets/starships/SmAGL2YRes.jpg",
+        "hash": "1336985987219826057"
+      },
+      {
+        "file": "src/assets/vehicles/eNPTgZTlWE.jpg",
+        "hash": "4921989891934031203"
+      },
+      {
+        "file": "angular.json",
+        "hash": "8578361604058249829"
+      },
+      {
+        "file": "src/app/app.routes.ts",
+        "hash": "13625615202127698542"
+      },
+      {
+        "file": "src/app/models/vehicles.model.ts",
+        "hash": "768847974661151702"
+      },
+      {
+        "file": "src/app/app.config.ts",
+        "hash": "1996302902760300300"
+      },
+      {
+        "file": "package.json",
+        "hash": "6728320236581190032"
+      },
+      {
+        "file": "src/assets/starships/ZwoZE4IXAr.jpg",
+        "hash": "12679188924365431280"
+      },
+      {
+        "file": "src/app/services/cart.service.spec.ts",
+        "hash": "4835626579989819090"
+      },
+      {
+        "file": "src/app/services/events.service.ts",
+        "hash": "13462816790399661592"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": "src/app/components/vehicles/vehicles.component.ts",
+        "hash": "11482975593157038086"
+      },
+      {
+        "file": "src/assets/starships/5q1xW3G5MP.jpg",
+        "hash": "11638291321352837125"
+      },
+      {
+        "file": "src/app/components/home/home.component.ts",
+        "hash": "12879106052952716810"
+      },
+      {
+        "file": "src/app/services/vehicles.service.spec.ts",
+        "hash": "5240033519813788887"
+      },
+      {
+        "file": "src/assets/vehicles/pMwZsyHn9F.jpg",
+        "hash": "15264029808472862232"
+      },
+      {
+        "file": "src/assets/starships/nY2fTXX1F1.jpg",
+        "hash": "10903014932410841867"
+      },
+      {
+        "file": "src/app/components/vehicles/vehicles.component.html",
+        "hash": "5307758198639092086"
+      },
+      {
+        "file": "src/app/components/top-bar/top-bar.component.spec.ts",
+        "hash": "4583742922324058593"
+      },
+      {
+        "file": "src/app/components/starships/starships.component.spec.ts",
+        "hash": "5718163908597524343"
+      },
+      {
+        "file": "db.json",
+        "hash": "8552389738002061553"
+      },
+      {
+        "file": "src/assets/starships/78QvzwEkoC.jpg",
+        "hash": "7581646875738825896"
+      },
+      {
+        "file": "src/app/common/pipes/stock-status.pipe.spec.ts",
+        "hash": "4654525929077794168"
+      },
+      {
+        "file": "src/assets/starships/9lTVqvWu97.jpg",
+        "hash": "13803151471363573365"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17038929134016848735"
+      },
+      {
+        "file": "src/assets/vehicles/d8vCtlRaAB.jpg",
+        "hash": "3643141619789179320"
+      },
+      {
+        "file": "src/app/components/top-bar/top-bar.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/vehicles/KVXGWeGIij.jpg",
+        "hash": "17208719031238733659"
+      },
+      {
+        "file": "src/assets/starships/PHCjzxmE2l.jpg",
+        "hash": "6051657173812598905"
+      },
+      {
+        "file": "src/assets/starships/p5HhbwwBGu.jpg",
+        "hash": "11892245229551614429"
+      },
+      {
+        "file": "src/assets/vehicles/QPQRVV8W2K.jpg",
+        "hash": "13633571505471876955"
+      },
+      {
+        "file": "src/app/services/past-orders.service.spec.ts",
+        "hash": "15988052813865958291"
+      },
+      {
+        "file": "src/app/components/ui/banner/banner.component.spec.ts",
+        "hash": "15787779688852303982"
+      },
+      {
+        "file": "src/assets/starships/Dp5YCEIXR3.jpg",
+        "hash": "3199379257788583704"
+      },
+      {
+        "file": "src/assets/vehicles/KMVlBMNvE4.jpg",
+        "hash": "16291819312152133839"
+      },
+      {
+        "file": "src/assets/vehicles/WsfCvLenTA.jpg",
+        "hash": "17930016019292457853"
+      },
+      {
+        "file": "src/assets/starships/zfyE9VfkZj.jpg",
+        "hash": "17931998504886181015"
+      },
+      {
+        "file": "src/assets/starships/Or6puNLEn5.jpg",
+        "hash": "674891959619534419"
+      },
+      {
+        "file": "src/assets/vehicles/aoewlvkIz9.jpg",
+        "hash": "17625882898624082904"
       },
       {
         "file": "src/app/services/events.service.spec.ts",
         "hash": "857226808402216144"
       },
       {
+        "file": "src/index.html",
+        "hash": "18328536836451093536"
+      },
+      {
+        "file": "src/assets/vehicles/YuPUPmlg2r.jpg",
+        "hash": "4454474148889771170"
+      },
+      {
+        "file": "src/app/components/starships/starships.component.ts",
+        "hash": "12713572145525542603"
+      },
+      {
+        "file": "src/assets/vehicles/f1oyRd3bJt.jpg",
+        "hash": "2364213588710491824"
+      },
+      {
+        "file": "src/assets/smile.svg",
+        "hash": "2252547990039562830"
+      },
+      {
+        "file": "src/app/components/product-card/product-card.component.html",
+        "hash": "1267645184165286256"
+      },
+      {
         "file": "src/app/components/starships/starships.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/starsbg.jpg",
+        "hash": "7911260797941926377"
+      },
+      {
+        "file": "src/assets/starships/eC4XhsytIo.jpg",
+        "hash": "10074422683299792765"
+      },
+      {
+        "file": "src/app/models/starship.model.ts",
+        "hash": "17857414617332362712"
+      },
+      {
+        "file": "src/assets/vehicles/pCVeRYzs6x.jpg",
+        "hash": "10884549345946728134"
+      },
+      {
+        "file": "src/app/services/vehicles.service.ts",
+        "hash": "8300190901853927721"
+      },
+      {
+        "file": "src/app/common/pipes/currency-credits.pipe.ts",
+        "hash": "7791817980330266718"
+      },
+      {
+        "file": "src/app/models/relations.model.ts",
+        "hash": "3605419187178947797"
+      },
+      {
+        "file": "tailwind.config.js",
+        "hash": "15837075864296032885"
+      },
+      {
+        "file": "src/assets/starships/udnaqe2L4V.jpg",
+        "hash": "12207621605812192270"
+      },
+      {
+        "file": "src/assets/vehicles/ICWlyWg0Mu.jpg",
+        "hash": "10843703274978498108"
+      },
+      {
+        "file": "src/assets/vehicles/RG7c1jYBpa.jpg",
+        "hash": "14997984563868597872"
+      },
+      {
+        "file": "src/assets/vehicles/rKF6mcUesc.jpg",
+        "hash": "14223090773484959833"
+      },
+      {
+        "file": "src/app/components/past-orders/past-orders.component.html",
+        "hash": "5983223017507875372"
+      },
+      {
+        "file": "src/app/components/past-orders/past-orders.component.ts",
+        "hash": "1617259488379226454"
+      },
+      {
+        "file": "src/assets/vehicles/24cHAlVrrd.jpg",
+        "hash": "13427827047391005338"
+      },
+      {
+        "file": "src/assets/vehicles/VYcFeVcevK.jpg",
+        "hash": "12263190108188147385"
+      },
+      {
+        "file": "src/app/components/cart/cart.component.ts",
+        "hash": "12248715585178406198"
+      },
+      {
+        "file": "src/assets/vehicles/51N0xPOb9B.jpg",
+        "hash": "16390592596668156651"
+      },
+      {
+        "file": "src/assets/vehicles/iJreBMeM4k.jpg",
+        "hash": "9305804904503067502"
+      },
+      {
+        "file": "src/app/services/cart.service.ts",
+        "hash": "1545232653719787815"
+      },
+      {
+        "file": "src/assets/starships/nYhnGcgBDc.jpg",
+        "hash": "9270622213532942774"
+      },
+      {
+        "file": "src/app/components/product-card/product-card.component.scss",
+        "hash": "17332490302212631716"
+      },
+      {
+        "file": "src/assets/starships/utk70kfdBh.jpg",
+        "hash": "13712497112792722303"
+      },
+      {
+        "file": "src/assets/vehicles/8deZC3YjGb.jpg",
+        "hash": "8797367750938525987"
+      },
+      {
+        "file": "src/assets/vehicles/zPueYdAR01.jpg",
+        "hash": "1003484117425787929"
+      },
+      {
+        "file": "src/assets/starships/xrnyX0HUG9.jpg",
+        "hash": "6882073609340896549"
+      },
+      {
+        "file": "src/assets/starships/I7KA16svWR.jpg",
+        "hash": "12673412524697992311"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/components/past-orders/past-orders.component.spec.ts",
+        "hash": "3692322623561765849"
+      },
+      {
+        "file": "src/assets/starships/RTHryjQp6d.jpg",
+        "hash": "7352079150491087870"
+      },
+      {
+        "file": "src/assets/starships/kSnCBuvjnO.jpg",
+        "hash": "11200158655511474781"
+      },
+      {
+        "file": "src/assets/vehicles/GKADuoyFth.jpg",
+        "hash": "14171654539613944025"
+      },
+      {
+        "file": "src/app/components/home/home.component.spec.ts",
+        "hash": "5533293743300657749"
+      },
+      {
+        "file": "src/app/components/cart/cart.component.html",
+        "hash": "4466039197836664307"
+      },
+      {
+        "file": "src/assets/vehicles/utGgMTDozL.jpg",
+        "hash": "17719009916061554800"
+      },
+      {
+        "file": "src/app/services/past-orders.service.ts",
+        "hash": "6205132034110923619"
+      },
+      {
+        "file": "src/app/common/pipes/stock-status.pipe.ts",
+        "hash": "9784339512943770532"
+      },
+      {
+        "file": "src/assets/starships/GLTYEk8zyL.jpg",
+        "hash": "6501405875706479795"
+      },
+      {
+        "file": "src/app/components/past-orders/past-orders.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/styles.scss",
+        "hash": "13467917149278413308"
+      },
+      {
+        "file": "src/assets/vehicles/8cPVBOgBwJ.jpg",
+        "hash": "8781478476799436335"
+      },
+      {
+        "file": "src/app/components/vehicles/vehicles.component.spec.ts",
+        "hash": "3712782120243788841"
+      },
+      {
+        "file": "src/app/components/home/home.component.html",
+        "hash": "14234030898010465054"
+      },
+      {
+        "file": "src/app/components/home/home.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/gun.svg",
+        "hash": "12626923090102776504"
+      },
+      {
+        "file": "src/assets/spaceship.svg",
+        "hash": "5460515362145909756"
+      },
+      {
+        "file": "src/assets/vehicles/Ip1tgAaydW.jpg",
+        "hash": "12432325316105115396"
+      },
+      {
+        "file": "src/assets/.gitkeep",
         "hash": "3244421341483603138"
       },
       {
@@ -526,104 +574,44 @@
         "hash": "15575553540147145788"
       },
       {
-        "file": "src/app/components/events/events.component.scss",
-        "hash": "3244421341483603138"
+        "file": "src/assets/vehicles/zFQDtCX4GD.jpg",
+        "hash": "597632346179074378"
       },
       {
-        "file": "src/assets/starships/hoJsNB1dYq.jpg",
-        "hash": "8837145749310938085"
+        "file": "src/assets/vehicles/SLxC6CPcEL.jpg",
+        "hash": "7252354867395772634"
       },
       {
-        "file": "src/assets/vehicles/Ip1tgAaydW.jpg",
-        "hash": "12432325316105115396"
+        "file": "src/app/services/starships.service.spec.ts",
+        "hash": "11163400861549584287"
       },
       {
-        "file": "src/app/components/starships/starships.component.spec.ts",
-        "hash": "5718163908597524343"
+        "file": "src/app/services/starships.service.ts",
+        "hash": "12907467927450246434"
       },
       {
-        "file": "src/app/components/vehicles/vehicles.component.html",
-        "hash": "5307758198639092086"
+        "file": "src/assets/vehicles/AtFEKIwfzK.jpg",
+        "hash": "7493874412883133837"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "1960851932325857735"
+      },
+      {
+        "file": "src/assets/starships/bHPFB3mOuL.jpg",
+        "hash": "438409633119232388"
       },
       {
         "file": "src/assets/starships/g9bAc5wnTN.jpg",
         "hash": "5263304145505899632"
       },
       {
-        "file": "src/assets/starships/QjOyk3CH8K.jpg",
-        "hash": "10059114572163137564"
+        "file": "src/assets/vehicles/eBd6n35xfU.jpg",
+        "hash": "10013325842888706511"
       },
       {
-        "file": "src/index.html",
-        "hash": "18328536836451093536"
-      },
-      {
-        "file": "src/app/components/product-card/product-card.component.spec.ts",
-        "hash": "2745372088444382232"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "8486914218797555821"
-      },
-      {
-        "file": "tsconfig.app.json",
-        "hash": "17337579397915052279"
-      },
-      {
-        "file": "src/assets/vehicles/24cHAlVrrd.jpg",
-        "hash": "13427827047391005338"
-      },
-      {
-        "file": "src/assets/vehicles/ICWlyWg0Mu.jpg",
-        "hash": "10843703274978498108"
-      },
-      {
-        "file": "src/assets/vehicles/zFQDtCX4GD.jpg",
-        "hash": "597632346179074378"
-      },
-      {
-        "file": "src/assets/starships/deSSraPLXL.jpg",
-        "hash": "14083942735981781365"
-      },
-      {
-        "file": "src/app/components/top-bar/top-bar.component.ts",
-        "hash": "206408275255942744"
-      },
-      {
-        "file": "src/assets/starships/utk70kfdBh.jpg",
-        "hash": "13712497112792722303"
-      },
-      {
-        "file": "src/app/services/past-orders.service.spec.ts",
-        "hash": "15988052813865958291"
-      },
-      {
-        "file": "src/assets/starships/78QvzwEkoC.jpg",
-        "hash": "7581646875738825896"
-      },
-      {
-        "file": "src/app/components/product-card/product-card.component.scss",
-        "hash": "17332490302212631716"
-      },
-      {
-        "file": "src/main.ts",
-        "hash": "4927504514031276065"
-      },
-      {
-        "file": "src/app/common/pipes/currency-credits.pipe.ts",
-        "hash": "7791817980330266718"
-      },
-      {
-        "file": "src/app/components/starships/starships.component.html",
-        "hash": "4955560093667705151"
-      },
-      {
-        "file": "src/assets/vehicles/51N0xPOb9B.jpg",
-        "hash": "16390592596668156651"
-      },
-      {
-        "file": "src/assets/starships/F5l2KSa4Xk.jpg",
-        "hash": "10720262977338995696"
+        "file": "src/app/common/pipes/stock-status-appearance.pipe.spec.ts",
+        "hash": "1691521310482046260"
       },
       {
         "file": "src/assets/vehicles/avmXmWsDDJ.jpg",
@@ -634,28 +622,68 @@
         "hash": "9400253403095138230"
       },
       {
-        "file": "src/app/components/product-card/product-card.component.ts",
-        "hash": "4316688624743942473"
+        "file": "src/app/models/response.model.ts",
+        "hash": "14078423320101836663"
       },
       {
-        "file": "src/app/services/cart.service.spec.ts",
-        "hash": "4835626579989819090"
+        "file": "src/app/components/starships/starships.component.html",
+        "hash": "4955560093667705151"
       },
       {
-        "file": "README.md",
-        "hash": "17172603412179593399"
+        "file": "src/app/components/top-bar/top-bar.component.html",
+        "hash": "9641422573683676551"
       },
       {
-        "file": "src/app/components/home/home.component.html",
-        "hash": "4702936540724867607"
+        "file": "package-lock.json",
+        "hash": "8486914218797555821"
       },
       {
-        "file": "src/assets/starships/PHCjzxmE2l.jpg",
-        "hash": "6051657173812598905"
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
       },
       {
-        "file": "src/assets/vehicles/YuPUPmlg2r.jpg",
-        "hash": "4454474148889771170"
+        "file": "src/app/components/cart/cart.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "5474312759874096251"
+      },
+      {
+        "file": "src/app/components/events/events.component.spec.ts",
+        "hash": "13072315391694157511"
+      },
+      {
+        "file": "src/assets/starships/PzM6RB4tW9.jpg",
+        "hash": "9670813803646760113"
+      },
+      {
+        "file": "src/assets/starships/hoJsNB1dYq.jpg",
+        "hash": "8837145749310938085"
+      },
+      {
+        "file": "src/app/components/events/events.component.html",
+        "hash": "4777772042029771368"
+      },
+      {
+        "file": "src/assets/vehicles/DJIm9mYksz.jpg",
+        "hash": "932219734042640423"
+      },
+      {
+        "file": "src/assets/vehicles/NdKhSWkcGj.jpg",
+        "hash": "9427440837754596829"
+      },
+      {
+        "file": "src/app/components/events/events.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/components/ui/banner/banner.component.ts",
+        "hash": "15865994476389443799"
+      },
+      {
+        "file": "src/app/common/pipes/currency-credits.pipe.spec.ts",
+        "hash": "2350974418246405870"
       }
     ],
     "projectFileMap": {}

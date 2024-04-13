@@ -4,3 +4,8 @@
 @import "../node_modules/tailwindcss/components.css";
 
 @import "../node_modules/tailwindcss/utilities.css";
+
+html {
+  background-image: url("./assets/starsbg.jpg");
+  background-repeat: repeat;
+}

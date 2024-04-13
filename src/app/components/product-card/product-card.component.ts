@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, computed, input, signal } from '@angular/core';
 import { Vehicle } from '../../models/vehicles.model';
 import { Starship } from '../../models/starship.model';
 import { TuiTagModule } from '@taiga-ui/kit';
@@ -27,4 +27,10 @@ export class ProductCardComponent {
   product = input.required<Vehicle | Starship>();
 
   randomStockStatus = signal<number>(Math.floor(Math.random() * 3) + 1);
+
+  productImage = computed(() =>
+    this.product().hasOwnProperty('MGLT')
+      ? '/assets/starships/' + this.product().objectId + '.jpg'
+      : '/assets/vehicles/' + this.product().objectId + '.jpg'
+  );
 }

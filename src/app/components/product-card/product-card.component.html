@@ -1,7 +1,7 @@
 <div class="flex card text-white flex-col h-72 w-48 justify-between">
   <section class="flex flex-col px-2" #header>
     <p
-      class="text-lg font-semibold text-ellipsis overflow-hidden whitespace-nowrap"
+      class="p-2 text-base font-semibold text-ellipsis overflow-hidden whitespace-nowrap"
       tuiHintAppearance="onDark"
       [tuiHint]="tooltip"
       tuiHintDirection="top-left"
@@ -13,11 +13,7 @@
     </ng-template>
   </section>
   <section class="flex flex-col" #image>
-    <img
-      src="{{ '/assets/vehicles/' + product().objectId + '.jpg' }}"
-      alt="product_image"
-      class="h-32"
-    />
+    <img src="{{ productImage() }}" alt="product_image" class="h-32" />
   </section>
   <section class="flex flex-col px-2 gap-1" #info>
     <div class="flex flex-row gap-2">
@@ -32,9 +28,23 @@
       @if(product().costInCredits){ Price:
       <strong>{{ product().costInCredits! | currencyCredits }}</strong>
       }@else {
-      <button tuiButton type="button" size="xs" appearance="accent">
+      <button
+        tuiButton
+        type="button"
+        size="xs"
+        appearance="accent"
+        tuiHintAppearance="onDark"
+        [tuiHint]="tooltipQuote"
+      >
         {{ "Ask for a quote" }}
       </button>
+      <ng-template #tooltipQuote>
+        <span class="text-sm"
+          >Some items are too expensive and/or the transportation is too complex
+          to have a fixed price! <br />
+          Contact us and we'll create a quote tailormade for you!</span
+        >
+      </ng-template>
 
       }
     </div>

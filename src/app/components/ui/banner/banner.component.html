@@ -1,0 +1,68 @@
+<div
+  class="flex flex-row justify-between bg-yellow-400 px-10 text-xl font-bold py-2"
+>
+  <div
+    class="flex w-1/5 align-center items-center flex-col gap-2 text-center justify-between"
+  >
+    <span>
+      FREE SHIPPING IN ANDROMEDA GALAXY
+      <tui-svg
+        src="tuiIconHelpCircle"
+        class="cursor-pointer"
+        tuiHintAppearance="onLlght"
+        [tuiHint]="tooltipFreeShipping"
+      ></tui-svg
+    ></span>
+    <tui-icon icon="assets/spaceship.svg" class="large-icon"></tui-icon>
+    <ng-template #tooltipFreeShipping>
+      <span class="text-sm"
+        >For all orders <b>over</b> {{ 100000 | currencyCredits }}!</span
+      >
+    </ng-template>
+  </div>
+
+  <div
+    class="flex w-1/5 align-center items-center flex-col gap-2 text-center justify-between"
+  >
+    <span
+      >SATISFIED OR EXECUTED
+      <tui-svg
+        src="tuiIconHelpCircle"
+        class="cursor-pointer"
+        tuiHintAppearance="onLlght"
+        [tuiHint]="tooltipSatisfy"
+      ></tui-svg
+    ></span>
+    <tui-icon icon="assets/gun.svg" class="large-icon"></tui-icon>
+
+    <ng-template #tooltipSatisfy>
+      <span class="text-sm"
+        >Something was wrong with your order? Don't worry we will retrace every
+        step and execute the rebel emplyee who caused the misfit! <br />
+        (This is what we call the ultimate firing)</span
+      >
+    </ng-template>
+  </div>
+
+  <div
+    class="flex w-1/5 align-center items-center flex-col gap-2 text-center justify-between"
+  >
+    <span
+      >BEST CUSTOMER SUPPORT
+      <tui-svg
+        src="tuiIconHelpCircle"
+        class="cursor-pointer"
+        tuiHintAppearance="onLlght"
+        [tuiHint]="tooltipSupport"
+      ></tui-svg
+    ></span>
+    <tui-icon icon="assets/smile.svg" class="large-icon"></tui-icon>
+
+    <ng-template #tooltipSupport>
+      <span class="text-sm"
+        >If you have any doubt or you suspect a rebel is among you, don't be
+        afraid to contact us!</span
+      >
+    </ng-template>
+  </div>
+</div>
