@@ -4072,3 +4072,10 @@
 [NX Daemon Server] - 2024-04-13T20:52:05.755Z - [REQUEST]: src/app/components/ui/banner/banner.component.html
 [NX Daemon Server] - 2024-04-13T20:52:05.755Z - [REQUEST]: 
 [NX Daemon Server] - 2024-04-13T20:52:05.771Z - Time taken for 'hash changed files from watcher' 0.44962199963629246ms
+[NX Daemon Server] - 2024-04-13T20:53:58.308Z - [WATCHER]: src/app/components/ui/banner/banner.component.html was modified
+[NX Daemon Server] - 2024-04-13T20:53:58.308Z - [REQUEST]: Responding to the client. File watch changed
+[NX Daemon Server] - 2024-04-13T20:53:58.308Z - Done responding to the client File watch changed
+[NX Daemon Server] - 2024-04-13T20:53:58.308Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-04-13T20:53:58.309Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-04-13T20:53:58.309Z - Time taken for 'changed-projects' 0.014156000688672066ms
+[NX Daemon Server] - 2024-04-13T20:53:58.685Z - [WATCHER]: Processing file changes in outputs
