@@ -1,6 +1,16 @@
 <div class="flex card text-white flex-col h-72 w-48 justify-between">
   <section class="flex flex-col px-2" #header>
-    <p class="text-lg">{{ product().name }}</p>
+    <p
+      class="text-lg font-semibold text-ellipsis overflow-hidden whitespace-nowrap"
+      tuiHintAppearance="onDark"
+      [tuiHint]="tooltip"
+      tuiHintDirection="top-left"
+    >
+      {{ product().name }}
+    </p>
+    <ng-template #tooltip>
+      <span class="text-sm"> {{ product().name }}</span>
+    </ng-template>
   </section>
   <section class="flex flex-col" #image>
     <img

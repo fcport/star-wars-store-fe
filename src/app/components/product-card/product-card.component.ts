@@ -6,7 +6,7 @@ import { StockStatusPipe } from '../../common/pipes/stock-status.pipe';
 import { StockStatusAppearancePipe } from '../../common/pipes/stock-status-appearance.pipe';
 import { TuiChipModule } from '@taiga-ui/experimental';
 import { CurrencyCreditsPipe } from '../../common/pipes/currency-credits.pipe';
-import { TuiButtonModule } from '@taiga-ui/core';
+import { TuiButtonModule, TuiHintModule } from '@taiga-ui/core';
 
 @Component({
   selector: 'app-product-card',
@@ -20,6 +20,7 @@ import { TuiButtonModule } from '@taiga-ui/core';
     TuiChipModule,
     CurrencyCreditsPipe,
     TuiButtonModule,
+    TuiHintModule,
   ],
 })
 export class ProductCardComponent {

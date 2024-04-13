@@ -1,16 +1,16 @@
 <div class="w-full flex flex-col gap-2">
-  <section class="flex flex-col align-center content-center items-center">
+  <section class="flex flex-col align-center content-center items-center mb-10">
     <img class="w-6/12" src="http://imageshack.com/a/img922/3783/oyvsRd.png" />
     <span class="text-xl text-yellow-400 z-10 -mt-4">SHOP</span>
   </section>
 
-  <article class="my-3">
+  <article class="my-10">
     <div>
       @if(vehiclesCarousel() && vehiclesCarousel()!.length > 0){ }
       <tui-carousel
         [duration]="4000"
         [(index)]="carouselCurrentIndex"
-        [itemsCount]="3"
+        [itemsCount]="itemsToShow()"
         [draggable]="true"
       >
         @for( vehicle of vehiclesCarousel(); track vehicle.objectId){
