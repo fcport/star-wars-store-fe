@@ -1,1 +1,20 @@
-<p>starships works!</p>
+<div class="flex flex-col gap-2 px-3 mt-16">
+  <span class="text-4xl font-extrabold margin-auto text-yellow-400 text-center"
+    >STARSHIPS</span
+  >
+  <div
+    class="my-10 grid grid-cols-1 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 gap-4 w-full justify-items-center px-4"
+  >
+    @for(starship of starships(); track $index){
+    <app-product-card [product]="starship" [category]="'starship'">
+    </app-product-card>
+    }
+  </div>
+
+  <tui-pagination
+    class="mb-5"
+    [index]="0"
+    [length]="total()"
+    (indexChange)="goToPage($event)"
+  ></tui-pagination>
+</div>

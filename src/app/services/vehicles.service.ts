@@ -18,7 +18,7 @@ export class VehiclesService {
   getVehicles(skip: number = 0, limit: number = 10) {
     return this.httpClient
       .get<Result<Vehicle>>(
-        `https://parseapi.back4app.com/classes/Vehicle?count=${skip}&limit=${limit}`,
+        `https://parseapi.back4app.com/classes/Vehicle?skip=${skip}&limit=${limit}`,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ export class VehiclesService {
     );
 
     return this.httpClient.get<Result<Vehicle>>(
-      `https://parseapi.back4app.com/classes/Vehicle?count=${skip}&limit=${limit}where=${where}`
+      `https://parseapi.back4app.com/classes/Vehicle?skip=${skip}&limit=${limit}where=${where}`
     );
   }
 }

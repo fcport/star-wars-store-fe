@@ -19,6 +19,7 @@
         @for( vehicle of vehiclesCarousel(); track vehicle.objectId){
         <ng-container>
           <app-product-card
+            category="vehicle"
             class="m-auto"
             *tuiItem
             draggable="false"
@@ -40,6 +41,7 @@
         @for( starship of starshipCarousel(); track starship.objectId){
         <ng-container>
           <app-product-card
+            category="starship"
             class="m-auto"
             *tuiItem
             draggable="false"

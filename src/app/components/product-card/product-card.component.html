@@ -49,15 +49,23 @@
       }
     </div>
   </section>
-  <section class="p-2 w-full" #footer>
+  <section class="p-2 w-full flex flex-row gap-2" #footer>
     <button
       tuiButton
       appearance="floating"
       type="button"
       size="s"
-      class="w-full"
+      [ngClass]="{
+        'w-2/3': !!product().costInCredits,
+        'w-full': !product().costInCredits
+      }"
     >
       Details
     </button>
+    @if(product().costInCredits){
+    <button tuiButton appearance="accent" type="button" size="s" class="w-1/5">
+      <tui-svg src="tuiIconShoppingCart"></tui-svg>
+    </button>
+    }
   </section>
 </div>

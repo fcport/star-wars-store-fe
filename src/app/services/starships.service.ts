@@ -1,10 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { map } from 'rxjs';
+import { map, tap } from 'rxjs';
 import { FAKE_APP_ID, FAKE_MASTER_KEY } from '../components/constants/keys';
 import { Result } from '../models/response.model';
-import { Vehicle } from '../models/vehicles.model';
 import { Starship } from '../models/starship.model';
 
 @Injectable({
@@ -15,11 +14,12 @@ export class StarshipsService {
   constructor() {}
 
   starshipHome = toSignal(this.getStarships());
+  totalStarships: number | null = null;
 
   getStarships(skip: number = 0, limit: number = 10) {
     return this.httpClient
       .get<Result<Starship>>(
-        `https://parseapi.back4app.com/classes/Starship?count=${skip}&limit=${limit}`,
+        `https://parseapi.back4app.com/classes/Starship?skip=${skip}&limit=${limit}`,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -28,7 +28,12 @@ export class StarshipsService {
           },
         }
       )
-      .pipe(map((r) => r.results));
+      .pipe(
+        tap((result) => {
+          if (!!this.totalStarships) this.totalStarships = result.count;
+        }),
+        map((r) => r.results)
+      );
   }
 
   getStarshipById(id: string, skip: number = 0, limit: number = 10) {
