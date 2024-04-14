@@ -6,9 +6,15 @@ import { VehiclesService } from '../../services/vehicles.service';
 import { HostListener } from '@angular/core';
 import { StarshipsService } from '../../services/starships.service';
 import { TuiHintModule, TuiSvgModule } from '@taiga-ui/core';
-import { TuiIconModule } from '@taiga-ui/experimental';
+import {
+  TuiCardModule,
+  TuiIconModule,
+  TuiSkeletonModule,
+} from '@taiga-ui/experimental';
 import { CurrencyCreditsPipe } from '../../common/pipes/currency-credits.pipe';
 import { BannerComponent } from '../ui/banner/banner.component';
+import { EventsService } from '../../services/events.service';
+import { EventJobCardComponent } from '../ui/event-job-card/event-job-card.component';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +30,9 @@ import { BannerComponent } from '../ui/banner/banner.component';
     TuiHintModule,
     CurrencyCreditsPipe,
     BannerComponent,
+    EventJobCardComponent,
+    TuiSkeletonModule,
+    TuiCardModule,
   ],
 })
 export class HomeComponent {
@@ -31,9 +40,13 @@ export class HomeComponent {
   carouselStarshipCurrentIndex: number = 0;
   vehicleService = inject(VehiclesService);
   vehiclesCarousel = this.vehicleService.vehiclesHome;
+  eventsService = inject(EventsService);
 
   starshipService = inject(StarshipsService);
   starshipCarousel = this.starshipService.starshipHome;
+
+  eventsHome = this.eventsService.eventsJob;
+  skeleton = Array(4).fill(0);
 
   screenWidth = signal<number>(0);
 

@@ -24,7 +24,7 @@ export class TopBarComponent {
       url: '/starships',
     },
     {
-      title: 'Events',
+      title: 'Work With Us!',
       url: '/events',
     },
     {

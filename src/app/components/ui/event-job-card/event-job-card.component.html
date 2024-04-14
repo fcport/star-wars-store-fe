@@ -1,0 +1,70 @@
+<div class="flex flex-col gap-2 p-2 text-white job-card w-64">
+  <section #header>
+    <div class="text-xl font-semibold">{{ job().theme }}</div>
+    <div></div>
+  </section>
+  <section #info>
+    <div>{{ job().brief }}</div>
+  </section>
+  <section #payout>
+    <div>{{ job().payout }}</div>
+  </section>
+  <hr />
+  <section #complications>
+    <div class="text-red-500">{{ job().complication }}</div>
+  </section>
+  <hr />
+  <button
+    [appearance]="taken() ? 'secondary-destructive' : 'accent'"
+    tuiButton
+    [size]="'m'"
+    type="button"
+    class="tui-space_right-3 tui-space_bottom-3 mt-2"
+    (click)="taken() ? forfaitJob() : showDialog()"
+  >
+    {{ taken() ? "Forfait Job" : "Accept Job" }}
+  </button>
+</div>
+
+<ng-template
+  let-observer
+  [tuiDialogOptions]="{ label: 'About you', size: 's' }"
+  [(tuiDialog)]="open"
+>
+  <form
+    #takeJob="ngForm"
+    class="flex flex-col gap-2"
+    (ngSubmit)="setAsTakenByUser(takeJob)"
+  >
+    <p class="my-2">
+      Tell us your name and surname and we will send you the full contract
+    </p>
+    <!-- <label for="name">Name</label> -->
+    <tui-input name="name" id="name" ngModel tuiTextfield tuiAutoFocus required>
+      Name
+    </tui-input>
+    <!-- <label for="surname">Surname</label> -->
+    <tui-input
+      name="surname"
+      id="surname"
+      ngModel
+      tuiTextfield
+      tuiAutoFocus
+      required
+    >
+      Surname
+    </tui-input>
+    <p>
+      <button
+        tuiButton
+        appearance="outline"
+        [size]="'m'"
+        class="my-3 w-full"
+        type="submit"
+        [disabled]="!takeJob.valid"
+      >
+        Send
+      </button>
+    </p>
+  </form>
+</ng-template>

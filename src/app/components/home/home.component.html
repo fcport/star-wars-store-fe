@@ -8,8 +8,8 @@
     <app-banner></app-banner>
 
     <div class="flex flex-col gap-2">
-      <h2 class="text-2xl text-white m-auto font-semibold my-2">Vehicles</h2>
-      @if(vehiclesCarousel() && vehiclesCarousel()!.length > 0){ }
+      <h2 class="text-3xl text-white m-auto font-semibold my-2">Vehicles</h2>
+      @if(vehiclesCarousel() && vehiclesCarousel()!.length > 0){
       <tui-carousel
         [duration]="4000"
         [(index)]="carouselVehicleCurrentIndex"
@@ -25,12 +25,12 @@
             [product]="vehicle"
           ></app-product-card> </ng-container
         >}</tui-carousel
-      >
+      >}
     </div>
 
     <div class="flex flex-col gap-2">
-      <h2 class="text-2xl text-white m-auto font-semibold my-2">Starships</h2>
-      @if(vehiclesCarousel() && vehiclesCarousel()!.length > 0){ }
+      <h2 class="text-3xl text-white m-auto font-semibold my-2">Starships</h2>
+      @if(vehiclesCarousel() && vehiclesCarousel()!.length > 0){
       <tui-carousel
         [duration]="3500"
         [(index)]="carouselStarshipCurrentIndex"
@@ -47,6 +47,54 @@
           ></app-product-card> </ng-container
         >}</tui-carousel
       >
+      }
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <h2 class="text-3xl text-yellow-400 m-auto font-semibold my-2">
+        Open Jobs
+      </h2>
+      <h4 class="p-2 bg-yellow-400 text-base font-white my-2 px-3">
+        We have some open jobs for everyone brave enough to help us!!
+        <br />
+        Some of the jobs are TOTALLY legal, some are on a gray area, but worry
+        not, if you accomplish the objective we will pay all attorney expenses
+        😊.
+        <br />
+        PC = Paid Contractor (you)
+      </h4>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 w-full justify-items-center px-4"
+      >
+        @if(eventsHome() && eventsHome()!.length > 0 ){ @for(event of
+        eventsHome()?.slice(0,4); track $index ){
+        <app-event-job-card [job]="event"></app-event-job-card>
+
+        } } @else if(eventsHome() && eventsHome()!.length === 0){
+        <h3>
+          Unfortunately we don't have any job available right now... come back
+          later!
+        </h3>
+        } @else { @for(item of skeleton; track $index ){
+        <section
+          tuiCardLarge
+          tuiSurface="flat"
+          [class.tui-skeleton_light]="true"
+          [class.tui-skeleton]="true"
+        >
+          <h2 tuiHeader>
+            <span tuiTitle>
+              Card
+              <span tuiSubtitle>Subtitle</span>
+            </span>
+          </h2>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </section>
+        } }
+      </div>
     </div>
   </article>
 </div>
