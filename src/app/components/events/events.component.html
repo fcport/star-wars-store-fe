@@ -1,1 +1,33 @@
-<p>events works!</p>
+<div class="flex flex-col gap-2 px-3 mt-16">
+  <span class="text-4xl font-extrabold margin-auto text-yellow-400 text-center"
+    >OPEN JOBS</span
+  >
+  <div
+    class="my-10 grid grid-cols-1 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 w-full justify-items-center px-4"
+  >
+    @if(events() && events()!.length > 0){ @for(event of events(); track
+    $index){
+    <app-event-job-card [job]="event"></app-event-job-card>
+    } }@else { @for(item of eventsSkeleton; track $index){
+
+    <section
+      tuiCardLarge
+      tuiSurface="flat"
+      [class.tui-skeleton_light]="true"
+      [class.tui-skeleton]="true"
+      class="h-62"
+    >
+      <h2 tuiHeader>
+        <span tuiTitle>
+          Card
+          <span tuiSubtitle>Subtitle</span>
+        </span>
+      </h2>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </section>
+    } }
+  </div>
+</div>

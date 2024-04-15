@@ -5,10 +5,31 @@
   <div
     class="my-10 grid grid-cols-1 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 gap-4 w-full justify-items-center px-4"
   >
-    @for(starship of starships(); track $index){
+    @if(starships() && starships().length > 0){ @for(starship of starships();
+    track $index){
     <app-product-card [product]="starship" [category]="'starship'">
     </app-product-card>
-    }
+    } }@else { @for(item of skeletonStaships; track $index){
+
+    <section
+      tuiCardLarge
+      tuiSurface="flat"
+      [class.tui-skeleton_light]="true"
+      [class.tui-skeleton]="true"
+      class="h-72"
+    >
+      <h2 tuiHeader>
+        <span tuiTitle>
+          Card
+          <span tuiSubtitle>Subtitle</span>
+        </span>
+      </h2>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </section>
+    } }
   </div>
 
   <tui-pagination
@@ -16,5 +37,6 @@
     [index]="0"
     [length]="total()"
     (indexChange)="goToPage($event)"
+    tuiMode="onDark"
   ></tui-pagination>
 </div>

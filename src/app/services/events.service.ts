@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { catchError, forkJoin, map, of } from 'rxjs';
+import { catchError, forkJoin, map, of, tap } from 'rxjs';
 import { EventJob } from '../models/event-job.model';
 import { EventResponse } from '../models/response.model';
 
@@ -15,19 +15,23 @@ export class EventsService {
 
   constructor() {}
 
-  eventsJob = toSignal(
+  eventsJobRaw = toSignal(
     forkJoin(
-      Array(5)
+      Array(10)
         .fill(0)
         .map((_) => this.getJobEvent())
     ).pipe(
+      tap((r) => this.eventsJob.set(r)),
       catchError((err) => {
         console.log(err);
+        this.eventsJob.set([]);
 
         return of([]);
       })
     )
   );
+
+  eventsJob = signal<EventJob[]>([]);
 
   parseEvent(ev: string) {
     const regex = /#### (\w+)\n([\s\S]+?)(?=#### \w+|$)/g;
@@ -55,5 +59,11 @@ export class EventsService {
 
   acceptJob(job: EventJob) {
     this.acceptedJobs.update((jobs) => [...jobs, job]);
+  }
+
+  forfaitJob(job: EventJob) {
+    this.acceptedJobs.update((jobs) =>
+      jobs.filter((j) => j.brief !== job.brief)
+    );
   }
 }

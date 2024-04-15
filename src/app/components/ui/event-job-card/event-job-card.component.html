@@ -1,19 +1,24 @@
-<div class="flex flex-col gap-2 p-2 text-white job-card w-64">
-  <section #header>
-    <div class="text-xl font-semibold">{{ job().theme }}</div>
-    <div></div>
+<div
+  class="flex flex-col gap-2 p-2 text-white job-card w-64 h-full justify-between"
+>
+  <section class="flex flex-col gap-2">
+    <section #header>
+      <div class="text-xl font-semibold">{{ job().theme }}</div>
+      <div></div>
+    </section>
+    <section #info>
+      <div>{{ job().brief }}</div>
+    </section>
+    <section #payout>
+      <div>{{ job().payout }}</div>
+    </section>
+    <hr />
+    <section #complications>
+      <div class="text-red-500">{{ job().complication }}</div>
+    </section>
+    <hr />
   </section>
-  <section #info>
-    <div>{{ job().brief }}</div>
-  </section>
-  <section #payout>
-    <div>{{ job().payout }}</div>
-  </section>
-  <hr />
-  <section #complications>
-    <div class="text-red-500">{{ job().complication }}</div>
-  </section>
-  <hr />
+
   <button
     [appearance]="taken() ? 'secondary-destructive' : 'accent'"
     tuiButton

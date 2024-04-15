@@ -4,7 +4,7 @@ import { Injectable, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Vehicle } from '../models/vehicles.model';
 import { FAKE_APP_ID, FAKE_MASTER_KEY } from '../components/constants/keys';
-import { map } from 'rxjs';
+import { map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +14,7 @@ export class VehiclesService {
   constructor() {}
 
   vehiclesHome = toSignal(this.getVehicles());
+  totalVehicles: number | null = null;
 
   getVehicles(skip: number = 0, limit: number = 10) {
     return this.httpClient
@@ -27,10 +28,17 @@ export class VehiclesService {
           },
         }
       )
-      .pipe(map((r) => r.results));
+      .pipe(
+        tap((res) => {
+          if (!this.totalVehicles) this.totalVehicles = res.count;
+        }),
+        map((r) => {
+          return r.results;
+        })
+      );
   }
 
-  getVehicleById(id: string, skip: number = 0, limit: number = 10) {
+  getVehicleById(id: string, skip: number = 0, limit: number = 1) {
     const where = encodeURIComponent(
       JSON.stringify({
         objectId: id,

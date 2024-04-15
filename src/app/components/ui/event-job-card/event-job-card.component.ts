@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import {
   TuiButtonModule,
   TuiDialogContext,
@@ -9,6 +9,7 @@ import {
 import { EventJob } from '../../../models/event-job.model';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TuiInputModule } from '@taiga-ui/kit';
+import { EventsService } from '../../../services/events.service';
 
 @Component({
   selector: 'app-event-job-card',
@@ -26,7 +27,13 @@ import { TuiInputModule } from '@taiga-ui/kit';
 })
 export class EventJobCardComponent {
   job = input.required<EventJob>();
-  taken = signal(false);
+  eventsService = inject(EventsService);
+  taken = computed(
+    () =>
+      this.eventsService
+        .acceptedJobs()
+        .findIndex((j) => j.brief === this.job().brief) !== -1
+  );
 
   dialogService = inject(TuiDialogService);
 
@@ -34,12 +41,13 @@ export class EventJobCardComponent {
 
   setAsTakenByUser(ev: any) {
     console.log(ev.value);
-    this.taken.set(true);
+    this.eventsService.acceptJob(this.job());
+
     this.open = false;
   }
 
   forfaitJob() {
-    this.taken.set(false);
+    this.eventsService.forfaitJob(this.job());
   }
 
   showDialog(): void {

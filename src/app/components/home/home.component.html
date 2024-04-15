@@ -69,7 +69,7 @@
         class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 w-full justify-items-center px-4"
       >
         @if(eventsHome() && eventsHome()!.length > 0 ){ @for(event of
-        eventsHome()?.slice(0,4); track $index ){
+        eventsHome().slice(0,4); track $index ){
         <app-event-job-card [job]="event"></app-event-job-card>
 
         } } @else if(eventsHome() && eventsHome()!.length === 0){

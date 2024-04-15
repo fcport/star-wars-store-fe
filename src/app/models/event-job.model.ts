@@ -3,4 +3,5 @@ export interface EventJob {
   brief: string;
   complication: string;
   payout?: number;
+  accepted?: boolean;
 }

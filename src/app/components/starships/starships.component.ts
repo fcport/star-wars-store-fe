@@ -5,11 +5,17 @@ import { computedAsync } from 'ngxtension/computed-async';
 import { StarshipsService } from '../../services/starships.service';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { startWith } from 'rxjs';
+import { TuiModeModule } from '@taiga-ui/core';
 
 @Component({
   selector: 'app-starships',
   standalone: true,
-  imports: [CommonModule, TuiPaginationModule, ProductCardComponent],
+  imports: [
+    CommonModule,
+    TuiPaginationModule,
+    ProductCardComponent,
+    TuiModeModule,
+  ],
   templateUrl: './starships.component.html',
   styleUrl: './starships.component.scss',
 })
@@ -21,13 +27,14 @@ export class StarshipsComponent {
     Math.ceil(this.starshipsService.totalStarships ?? 36 / this.elementsPerPage)
   );
 
+  skeletonStaships = Array(this.elementsPerPage).fill(0);
+
   page = signal(0);
 
   starships = computedAsync(
     () => {
       const skip = this.page() * this.elementsPerPage;
       const limit = this.elementsPerPage;
-      console.log(skip, limit);
       return this.starshipsService
         .getStarships(skip, limit)
         .pipe(startWith([]));
