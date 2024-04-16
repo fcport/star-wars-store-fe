@@ -1,1 +1,60 @@
-<p>vehicle-detail works!</p>
+@if(vehicle()){
+
+<div class="flex flex-col gap-3 my-4 text-white py-3 text-base px-10">
+  <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+    <div class="flex flex-col gap-4">
+      <h2 class="text-4xl font-semibold text-white">{{ vehicle()!.name }}</h2>
+      <img
+        src="{{ '/assets/vehicles/' + vehicle()!.objectId + '.jpg' }}"
+        alt=""
+      />
+    </div>
+    <div class="flex flex-col text-lg gap-2">
+      <div
+        class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+      >
+        <span>Cargo Capacity</span>
+        <span>{{ vehicle()!.cargoCapacity }}</span>
+      </div>
+      <div
+        class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+      >
+        <span>Crew</span>
+        <span>{{ vehicle()!.crew }}</span>
+      </div>
+      <div
+        class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+      >
+        <span>Price</span>
+        <span>{{ vehicle()!.costInCredits | currencyCredits }}</span>
+      </div>
+      <button
+        appearance="accent"
+        tuiButton
+        type="button"
+        class="tui-space_right-3 tui-space_bottom-3 my-4 w-full"
+      >
+        >>> Add to cart <<<
+      </button>
+    </div>
+  </div>
+  <div class="flex flex-row w-full">
+    <tui-tabs>
+      <button tuiTab (click)="onClick('Maps')">
+        <tui-svg src="tuiIconCreditCard" class="tui-space_right-2"></tui-svg>
+        Maps
+      </button>
+      <button disabled tuiTab (click)="onClick('Calls')">
+        <tui-svg src="tuiIconPhone" class="tui-space_right-2"></tui-svg>
+        Calls
+      </button>
+      <button tuiTab (click)="onClick('Settings')">
+        <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
+        Settings
+      </button>
+    </tui-tabs>
+  </div>
+</div>
+<p class="text-4xl text-white">{{ idParam() }}</p>
+<pre class="text-white">{{ vehicle() | json }}</pre>
+}@else { loading.... }

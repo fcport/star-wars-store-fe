@@ -14,10 +14,24 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'vehicles/:id',
+    loadComponent: () =>
+      import('./components/vehicle-detail/vehicle-detail.component').then(
+        (m) => m.VehicleDetailComponent
+      ),
+  },
+  {
     path: 'starships',
     loadComponent: () =>
       import('./components/starships/starships.component').then(
         (m) => m.StarshipsComponent
+      ),
+  },
+  {
+    path: 'starships/:id',
+    loadComponent: () =>
+      import('./components/starship-detail/starship-detail.component').then(
+        (m) => m.StarshipDetailComponent
       ),
   },
   {

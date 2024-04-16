@@ -8,6 +8,7 @@ import { TuiChipModule } from '@taiga-ui/experimental';
 import { CurrencyCreditsPipe } from '../../common/pipes/currency-credits.pipe';
 import { TuiButtonModule, TuiHintModule, TuiSvgModule } from '@taiga-ui/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
@@ -24,6 +25,7 @@ import { CommonModule } from '@angular/common';
     TuiButtonModule,
     TuiSvgModule,
     TuiHintModule,
+    RouterModule,
   ],
 })
 export class ProductCardComponent {

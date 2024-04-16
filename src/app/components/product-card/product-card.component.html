@@ -59,6 +59,10 @@
         'w-2/3': !!product().costInCredits,
         'w-full': !product().costInCredits
       }"
+      [routerLink]="[
+        category() === 'vehicle' ? '/vehicles' : '/starships',
+        product().objectId
+      ]"
     >
       Details
     </button>

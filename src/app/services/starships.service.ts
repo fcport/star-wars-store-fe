@@ -36,15 +36,16 @@ export class StarshipsService {
       );
   }
 
-  getStarshipById(id: string, skip: number = 0, limit: number = 10) {
-    const where = encodeURIComponent(
-      JSON.stringify({
-        objectId: id,
-      })
-    );
-
-    return this.httpClient.get<Result<Starship>>(
-      `https://parseapi.back4app.com/classes/Starship?count=${skip}&limit=${limit}where=${where}`
+  getStarshipById(id: string) {
+    return this.httpClient.get<Starship>(
+      `https://parseapi.back4app.com/classes/Starship/${id}`,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Parse-Application-Id': FAKE_APP_ID,
+          'X-Parse-Master-Key': FAKE_MASTER_KEY,
+        },
+      }
     );
   }
 }

@@ -38,15 +38,16 @@ export class VehiclesService {
       );
   }
 
-  getVehicleById(id: string, skip: number = 0, limit: number = 1) {
-    const where = encodeURIComponent(
-      JSON.stringify({
-        objectId: id,
-      })
-    );
-
-    return this.httpClient.get<Result<Vehicle>>(
-      `https://parseapi.back4app.com/classes/Vehicle?skip=${skip}&limit=${limit}where=${where}`
+  getVehicleById(id: string) {
+    return this.httpClient.get<Vehicle>(
+      `https://parseapi.back4app.com/classes/Vehicle/${id}`,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Parse-Application-Id': FAKE_APP_ID,
+          'X-Parse-Master-Key': FAKE_MASTER_KEY,
+        },
+      }
     );
   }
 }
