@@ -9,25 +9,35 @@
         alt=""
       />
     </div>
-    <div class="flex flex-col text-lg gap-2">
-      <div
-        class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
-      >
-        <span>Cargo Capacity</span>
-        <span>{{ vehicle()!.cargoCapacity }}</span>
-      </div>
-      <div
-        class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
-      >
-        <span>Crew</span>
-        <span>{{ vehicle()!.crew }}</span>
-      </div>
-      <div
-        class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
-      >
-        <span>Price</span>
-        <span>{{ vehicle()!.costInCredits | currencyCredits }}</span>
-      </div>
+    <div class="flex flex-col text-lg gap-2 justify-between">
+      <section class="flex flex-col gap-4">
+        <div
+          class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+        >
+          <span>Cargo Capacity</span>
+          <span>{{ vehicle()!.cargoCapacity }}</span>
+        </div>
+        <div
+          class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+        >
+          <span>Crew</span>
+          <span>{{ vehicle()!.crew }}</span>
+        </div>
+        <div
+          class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+        >
+          <span>Price</span>
+          <span>{{ vehicle()!.costInCredits | currencyCredits }}</span>
+        </div>
+
+        <div
+          class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+        >
+          <span>Manifacturer</span>
+          <span>{{ vehicle()?.manufacturer ?? "-" }}</span>
+        </div>
+      </section>
+
       <button
         appearance="accent"
         tuiButton
@@ -38,17 +48,17 @@
       </button>
     </div>
   </div>
-  <div class="flex flex-row w-full">
-    <tui-tabs>
-      <button tuiTab (click)="onClick('Maps')">
+  <div class="flex flex-row w-full text-white">
+    <tui-tabs tuiMode="onDark">
+      <button tuiTab class="text-white" (click)="onClick('Maps')">
         <tui-svg src="tuiIconCreditCard" class="tui-space_right-2"></tui-svg>
         Maps
       </button>
-      <button disabled tuiTab (click)="onClick('Calls')">
+      <button class="text-white" tuiTab (click)="onClick('Calls')">
         <tui-svg src="tuiIconPhone" class="tui-space_right-2"></tui-svg>
         Calls
       </button>
-      <button tuiTab (click)="onClick('Settings')">
+      <button class="text-white" tuiTab (click)="onClick('Settings')">
         <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
         Settings
       </button>

@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { TuiButtonModule, TuiModeModule, TuiSvgModule } from '@taiga-ui/core';
+import { TuiTabsModule } from '@taiga-ui/kit';
 import { computedAsync } from 'ngxtension/computed-async';
 import { injectParams } from 'ngxtension/inject-params';
-import { VehiclesService } from '../../services/vehicles.service';
 import { CurrencyCreditsPipe } from '../../common/pipes/currency-credits.pipe';
-import { TuiButtonModule, TuiSvgModule } from '@taiga-ui/core';
-import { TuiTabsModule } from '@taiga-ui/kit';
+import { VehiclesService } from '../../services/vehicles.service';
 
 @Component({
   selector: 'app-vehicle-detail',
@@ -18,6 +18,7 @@ import { TuiTabsModule } from '@taiga-ui/kit';
     TuiButtonModule,
     TuiTabsModule,
     TuiSvgModule,
+    TuiModeModule,
   ],
 })
 export class VehicleDetailComponent {
