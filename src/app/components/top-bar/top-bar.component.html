@@ -17,6 +17,11 @@
       class="p-2 px-4 flex items-center align-center hover:bg-white transition-colors duration-500 ease-out hover:font-semibold"
     >
       Cart
+      <tui-badge
+        class="m-2"
+        status="primary"
+        [value]="numberInCart()"
+      ></tui-badge>
       <tui-svg src="tuiIconShoppingCart"></tui-svg>
     </a>
   </div>

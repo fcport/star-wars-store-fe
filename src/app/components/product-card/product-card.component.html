@@ -67,7 +67,14 @@
       Details
     </button>
     @if(product().costInCredits){
-    <button tuiButton appearance="accent" type="button" size="s" class="w-1/5">
+    <button
+      tuiButton
+      appearance="accent"
+      type="button"
+      size="s"
+      class="w-1/5"
+      (click)="addToCart(product())"
+    >
       +<tui-svg src="tuiIconShoppingCart"></tui-svg>
     </button>
     }

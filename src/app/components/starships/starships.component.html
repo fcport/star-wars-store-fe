@@ -7,8 +7,7 @@
   >
     @if(starships() && starships().length > 0){ @for(starship of starships();
     track $index){
-    <app-product-card [product]="starship" [category]="'starship'">
-    </app-product-card>
+    <app-product-card [product]="starship" />
     } }@else { @for(item of skeletonStaships; track $index){
 
     <section

@@ -11,6 +11,8 @@ import { CurrencyCreditsPipe } from '../../common/pipes/currency-credits.pipe';
 import { computedAsync } from 'ngxtension/computed-async';
 import { injectParams } from 'ngxtension/inject-params';
 import { StarshipsService } from '../../services/starships.service';
+import { Starship } from '../../models/starship.model';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-starship-detail',
@@ -30,6 +32,7 @@ import { StarshipsService } from '../../services/starships.service';
 export class StarshipDetailComponent {
   idParam = injectParams('id');
   starshipService = inject(StarshipsService);
+  cartService = inject(CartService);
 
   starship = computedAsync(() => {
     return this.starshipService.getStarshipById(this.idParam() ?? '');
@@ -46,5 +49,9 @@ export class StarshipDetailComponent {
 
   onClick(prop: string) {
     this.contentToDisplay.set(prop);
+  }
+
+  addToCart(prod: Starship) {
+    this.cartService.addItemToCart(prod);
   }
 }

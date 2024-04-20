@@ -11,6 +11,8 @@ import { computedAsync } from 'ngxtension/computed-async';
 import { injectParams } from 'ngxtension/inject-params';
 import { CurrencyCreditsPipe } from '../../common/pipes/currency-credits.pipe';
 import { VehiclesService } from '../../services/vehicles.service';
+import { CartService } from '../../services/cart.service';
+import { Vehicle } from '../../models/vehicles.model';
 
 @Component({
   selector: 'app-vehicle-detail',
@@ -30,6 +32,7 @@ import { VehiclesService } from '../../services/vehicles.service';
 export class VehicleDetailComponent {
   idParam = injectParams('id');
   vehicleService = inject(VehiclesService);
+  cartService = inject(CartService);
 
   vehicle = computedAsync(() => {
     return this.vehicleService.getVehicleById(this.idParam() ?? '');
@@ -46,5 +49,9 @@ export class VehicleDetailComponent {
 
   onClick(prop: string) {
     this.contentToDisplay.set(prop);
+  }
+
+  addToCart(prod: Vehicle) {
+    this.cartService.addItemToCart(prod);
   }
 }

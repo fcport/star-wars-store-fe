@@ -1,4 +1,4 @@
-import { Component, computed, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { Vehicle } from '../../models/vehicles.model';
 import { Starship } from '../../models/starship.model';
 import { TuiTagModule } from '@taiga-ui/kit';
@@ -9,6 +9,7 @@ import { CurrencyCreditsPipe } from '../../common/pipes/currency-credits.pipe';
 import { TuiButtonModule, TuiHintModule, TuiSvgModule } from '@taiga-ui/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -30,13 +31,20 @@ import { RouterModule } from '@angular/router';
 })
 export class ProductCardComponent {
   product = input.required<Vehicle | Starship>();
+  cartService = inject(CartService);
 
   randomStockStatus = signal<number>(Math.floor(Math.random() * 3) + 1);
-  category = input<'vehicle' | 'starship'>('vehicle');
+  category = computed(() => {
+    return 'starshipClass' in this.product() ? 'starship' : 'vehicle';
+  });
 
   productImage = computed(() =>
     this.category() === 'vehicle'
       ? '/assets/vehicles/' + this.product().objectId + '.jpg'
       : '/assets/starships/' + this.product().objectId + '.jpg'
   );
+
+  addToCart(prod: Vehicle | Starship) {
+    this.cartService.addItemToCart(prod);
+  }
 }

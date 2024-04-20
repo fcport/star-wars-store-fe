@@ -1,1 +1,36 @@
-<p>cart works!</p>
+<h2 class="text-4xl text-yellow-500 w-full my-5 p-3">Checkout</h2>
+
+<div class="flex flex-row w-full gap-2 text-white">
+  <section #quotes></section>
+  <section #cart>
+    <div class="flex flex-col gap-3">
+      <div class="grid grid-cols-3 gap-3">
+        @for (item of cartItems(); track $index) {
+        <div
+          class="flex flex-row justify-between gap-3 cursor-pointer"
+          (click)="goToItem(item)"
+        >
+          {{ item.name }}
+        </div>
+        <div class="flex flex-row justify-between gap-3">{{ item.qty }}</div>
+        <div class="flex flex-row justify-between gap-3">
+          {{ item.qty * item.costInCredits! | currencyCredits }}
+        </div>
+        }
+        <hr class="col-span-3" />
+        <div class="col-span-2 font-semibold">Total</div>
+        <div class="font-semibold">{{ totalCart() | currencyCredits }}</div>
+      </div>
+
+      <button
+        tuiButton
+        type="button"
+        size="m"
+        appearance="primary"
+        tuiHintAppearance="onDark"
+      >
+        Place Order
+      </button>
+    </div>
+  </section>
+</div>
