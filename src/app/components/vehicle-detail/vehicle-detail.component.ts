@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { TuiButtonModule, TuiModeModule, TuiSvgModule } from '@taiga-ui/core';
+import { Component, computed, inject, signal } from '@angular/core';
+import {
+  TuiButtonModule,
+  TuiHintModule,
+  TuiModeModule,
+  TuiSvgModule,
+} from '@taiga-ui/core';
 import { TuiTabsModule } from '@taiga-ui/kit';
 import { computedAsync } from 'ngxtension/computed-async';
 import { injectParams } from 'ngxtension/inject-params';
@@ -19,16 +24,27 @@ import { VehiclesService } from '../../services/vehicles.service';
     TuiTabsModule,
     TuiSvgModule,
     TuiModeModule,
+    TuiHintModule,
   ],
 })
 export class VehicleDetailComponent {
-  onClick(arg0: string) {
-    throw new Error('Method not implemented.');
-  }
   idParam = injectParams('id');
   vehicleService = inject(VehiclesService);
 
   vehicle = computedAsync(() => {
     return this.vehicleService.getVehicleById(this.idParam() ?? '');
   });
+
+  contentToDisplay = signal<string>('consumables');
+  content = computed<string>(() => {
+    const cont = Object.entries(this.vehicle()!)
+      .filter(([key]) => key === this.contentToDisplay())
+      .flat();
+
+    return cont[1] ?? 'No data provided';
+  });
+
+  onClick(prop: string) {
+    this.contentToDisplay.set(prop);
+  }
 }

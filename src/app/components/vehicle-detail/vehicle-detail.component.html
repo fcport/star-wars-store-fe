@@ -1,9 +1,11 @@
 @if(vehicle()){
 
 <div class="flex flex-col gap-3 my-4 text-white py-3 text-base px-10">
-  <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
-    <div class="flex flex-col gap-4">
+  <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:col-span-2">
+    <div class="md:col-span-2 my-3">
       <h2 class="text-4xl font-semibold text-white">{{ vehicle()!.name }}</h2>
+    </div>
+    <div class="flex flex-col gap-4">
       <img
         src="{{ '/assets/vehicles/' + vehicle()!.objectId + '.jpg' }}"
         alt=""
@@ -27,7 +29,28 @@
           class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
         >
           <span>Price</span>
-          <span>{{ vehicle()!.costInCredits | currencyCredits }}</span>
+          @if(vehicle()?.costInCredits){
+          <span>{{ vehicle()!.costInCredits! | currencyCredits }}</span>
+          }@else {
+          <button
+            tuiButton
+            type="button"
+            size="xs"
+            appearance="accent"
+            tuiHintAppearance="onDark"
+            [tuiHint]="tooltipQuote"
+          >
+            {{ "Ask for a quote" }}
+          </button>
+          <ng-template #tooltipQuote>
+            <span class="text-sm"
+              >Some items are too expensive and/or the transportation is too
+              complex to have a fixed price! <br />
+              Contact us and we'll create a quote tailormade for you!</span
+            >
+          </ng-template>
+
+          }
         </div>
 
         <div
@@ -42,29 +65,48 @@
         appearance="accent"
         tuiButton
         type="button"
+        [disabled]="!vehicle()?.costInCredits"
         class="tui-space_right-3 tui-space_bottom-3 my-4 w-full"
       >
         >>> Add to cart <<<
       </button>
     </div>
   </div>
-  <div class="flex flex-row w-full text-white">
-    <tui-tabs tuiMode="onDark">
-      <button tuiTab class="text-white" (click)="onClick('Maps')">
+  <div class="flex flex-col w-full text-white">
+    <tui-tabs tuiMode="onDark" class="w-full">
+      <button tuiTab class="text-white" (click)="onClick('consumables')">
         <tui-svg src="tuiIconCreditCard" class="tui-space_right-2"></tui-svg>
-        Maps
+        Consumables
       </button>
-      <button class="text-white" tuiTab (click)="onClick('Calls')">
+      <button class="text-white" tuiTab (click)="onClick('hyperdriveRating')">
         <tui-svg src="tuiIconPhone" class="tui-space_right-2"></tui-svg>
-        Calls
+        Hyperdrive Rating
       </button>
-      <button class="text-white" tuiTab (click)="onClick('Settings')">
+      <button
+        class="text-white"
+        tuiTab
+        (click)="onClick('maxAtmospheringSpeed')"
+      >
         <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
-        Settings
+        Max Atmoshpering Speed
+      </button>
+      <button class="text-white" tuiTab (click)="onClick('length')">
+        <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
+        Length
+      </button>
+      <button class="text-white" tuiTab (click)="onClick('passengers')">
+        <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
+        Passengers
+      </button>
+      <button class="text-white" tuiTab (click)="onClick('model')">
+        <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
+        Model Full Name
       </button>
     </tui-tabs>
+    <div>
+      {{ content() }}
+    </div>
   </div>
 </div>
-<p class="text-4xl text-white">{{ idParam() }}</p>
-<pre class="text-white">{{ vehicle() | json }}</pre>
+
 }@else { loading.... }

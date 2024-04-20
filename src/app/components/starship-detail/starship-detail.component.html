@@ -1,1 +1,112 @@
-<p>starship-detail works!</p>
+@if(starship()){
+
+<div class="flex flex-col gap-3 my-4 text-white py-3 text-base px-10">
+  <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:col-span-2">
+    <div class="md:col-span-2 my-3">
+      <h2 class="text-4xl font-semibold text-white">{{ starship()!.name }}</h2>
+    </div>
+    <div class="flex flex-col gap-4">
+      <img
+        src="{{ '/assets/starships/' + starship()!.objectId + '.jpg' }}"
+        alt=""
+      />
+    </div>
+    <div class="flex flex-col text-lg gap-2 justify-between">
+      <section class="flex flex-col gap-4">
+        <div
+          class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+        >
+          <span>Cargo Capacity</span>
+          <span>{{ starship()!.cargoCapacity }}</span>
+        </div>
+        <div
+          class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+        >
+          <span>Crew</span>
+          <span>{{ starship()!.crew }}</span>
+        </div>
+        <div
+          class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+        >
+          <span>Price {{ starship()?.costInCredits }}</span>
+          @if(starship()?.costInCredits){
+          <span>{{ starship()!.costInCredits! | currencyCredits }}</span>
+          }@else {
+          <button
+            tuiButton
+            type="button"
+            size="xs"
+            appearance="accent"
+            tuiHintAppearance="onDark"
+            [tuiHint]="tooltipQuote"
+          >
+            {{ "Ask for a quote" }}
+          </button>
+          <ng-template #tooltipQuote>
+            <span class="text-sm"
+              >Some items are too expensive and/or the transportation is too
+              complex to have a fixed price! <br />
+              Contact us and we'll create a quote tailormade for you!</span
+            >
+          </ng-template>
+
+          }
+        </div>
+
+        <div
+          class="flex flex-row justify-between rounded border-2 border-white border-solid px-3 py-2"
+        >
+          <span>Manifacturer</span>
+          <span>{{ starship()?.manufacturer ?? "-" }}</span>
+        </div>
+      </section>
+
+      <button
+        appearance="accent"
+        tuiButton
+        type="button"
+        [disabled]="!starship()?.costInCredits"
+        class="tui-space_right-3 tui-space_bottom-3 my-4 w-full"
+      >
+        >>> Add to cart <<<
+      </button>
+    </div>
+  </div>
+  <div class="flex flex-col w-full text-white">
+    <tui-tabs tuiMode="onDark" class="w-full">
+      <button tuiTab class="text-white" (click)="onClick('consumables')">
+        <tui-svg src="tuiIconCreditCard" class="tui-space_right-2"></tui-svg>
+        Consumables
+      </button>
+      <button class="text-white" tuiTab (click)="onClick('hyperdriveRating')">
+        <tui-svg src="tuiIconPhone" class="tui-space_right-2"></tui-svg>
+        Hyperdrive Rating
+      </button>
+      <button
+        class="text-white"
+        tuiTab
+        (click)="onClick('maxAtmospheringSpeed')"
+      >
+        <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
+        Max Atmoshpering Speed
+      </button>
+      <button class="text-white" tuiTab (click)="onClick('length')">
+        <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
+        Length
+      </button>
+      <button class="text-white" tuiTab (click)="onClick('passengers')">
+        <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
+        Passengers
+      </button>
+      <button class="text-white" tuiTab (click)="onClick('model')">
+        <tui-svg src="tuiIconSettings" class="tui-space_right-2"></tui-svg>
+        Model Full Name
+      </button>
+    </tui-tabs>
+    <div>
+      {{ content() }}
+    </div>
+  </div>
+</div>
+
+}@else { loading.... }
