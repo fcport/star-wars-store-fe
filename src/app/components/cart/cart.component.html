@@ -9,6 +9,8 @@
       <app-cart-item
         [cartItem]="item"
         (goToItem)="goToItem($event)"
+        (addOne)="addOne($event)"
+        (removeOne)="removeOne($event)"
       ></app-cart-item>
 
       }
@@ -32,6 +34,8 @@
       <app-cart-item
         [cartItem]="item"
         (goToItem)="goToItem($event)"
+        (addOne)="addOne($event)"
+        (removeOne)="removeOne($event)"
       ></app-cart-item>
       }
       <hr class="col-span-3" />

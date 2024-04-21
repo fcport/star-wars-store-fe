@@ -50,4 +50,12 @@ export class CartComponent {
       item.objectId,
     ]);
   }
+
+  addOne(item: CartItem<Starship> | CartItem<Vehicle>) {
+    this.cartService.addOneToCart(item);
+  }
+
+  removeOne(item: CartItem<Starship> | CartItem<Vehicle>) {
+    this.cartService.removeOneFromCart(item);
+  }
 }

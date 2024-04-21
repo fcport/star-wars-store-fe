@@ -38,23 +38,72 @@ export class CartService {
   }
 
   reduceWithQuantity(items: (Starship | Vehicle)[]) {
-    return items.reduce(
-      (
-        acc: (CartItem<Starship> | CartItem<Vehicle>)[],
-        curr: Starship | Vehicle
-      ) => {
-        const indexFound = acc.findIndex(
-          (item) => item.objectId === curr.objectId
-        );
+    return items
+      .reduce(
+        (
+          acc: (CartItem<Starship> | CartItem<Vehicle>)[],
+          curr: Starship | Vehicle
+        ) => {
+          const indexFound = acc.findIndex(
+            (item) => item.objectId === curr.objectId
+          );
 
-        if (indexFound !== -1) {
-          acc[indexFound].qty += 1;
-        } else {
-          acc.push({ ...curr, qty: 1 });
+          if (indexFound !== -1) {
+            acc[indexFound].qty += 1;
+          } else {
+            acc.push({ ...curr, qty: 1 });
+          }
+          return acc;
+        },
+        [] as (CartItem<Starship> | CartItem<Vehicle>)[]
+      )
+      .sort((a, b) => {
+        return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+      });
+  }
+
+  removeOneFromCart(item: CartItem<Starship> | CartItem<Vehicle>) {
+    if (item.costInCredits) {
+      this.cart.update((cart) => {
+        const index = cart.findIndex((i) => i.objectId === item.objectId);
+        const newCart = [...cart];
+        if (index !== -1) {
+          newCart.splice(index, 1);
         }
-        return acc;
-      },
-      [] as (CartItem<Starship> | CartItem<Vehicle>)[]
-    );
+
+        return newCart;
+      });
+      localStorage.setItem('cart', JSON.stringify(this.cart()));
+    } else {
+      this.itemsToAskForQuote.update((itemsQuote) => {
+        const index = itemsQuote.findIndex((i) => i.objectId === item.objectId);
+        const newItemsQuote = [...itemsQuote];
+        if (index !== -1) {
+          newItemsQuote.splice(index, 1);
+        }
+
+        return newItemsQuote;
+      });
+      localStorage.setItem(
+        'itemsToAskForQuote',
+        JSON.stringify(this.itemsToAskForQuote())
+      );
+    }
+  }
+  addOneToCart(item: CartItem<Starship> | CartItem<Vehicle>) {
+    if (item.costInCredits) {
+      this.cart.update((cart) => {
+        return [...cart, item];
+      });
+      localStorage.setItem('cart', JSON.stringify(this.cart()));
+    } else {
+      this.itemsToAskForQuote.update((itemsQuote) => {
+        return [...itemsQuote, item];
+      });
+      localStorage.setItem(
+        'itemsToAskForQuote',
+        JSON.stringify(this.itemsToAskForQuote())
+      );
+    }
   }
 }
