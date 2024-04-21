@@ -1,12 +1,16 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { Injectable, computed, inject, signal } from '@angular/core';
 import { Starship } from '../models/starship.model';
 import { Vehicle } from '../models/vehicles.model';
 import { CartItem } from '../models/cart-item.model';
+import { OrdersService } from './orders.service';
+import { take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
+  ordersService = inject(OrdersService);
+
   cart = signal<(Starship | Vehicle)[]>(
     localStorage.getItem('cart')
       ? JSON.parse(localStorage.getItem('cart')!)
@@ -105,5 +109,17 @@ export class CartService {
         JSON.stringify(this.itemsToAskForQuote())
       );
     }
+  }
+
+  placeOrderCart(cartItems: CartItem<Starship | Vehicle>[]) {
+    this.ordersService
+      .placeOrder(cartItems)
+      .pipe(take(1))
+      .subscribe(console.log);
+
+    this.cart.update((cart) => {
+      return [...cart];
+    });
+    localStorage.setItem('cart', JSON.stringify(this.cart()));
   }
 }

@@ -58,4 +58,8 @@ export class CartComponent {
   removeOne(item: CartItem<Starship> | CartItem<Vehicle>) {
     this.cartService.removeOneFromCart(item);
   }
+
+  placeOrder() {
+    this.cartService.placeOrderCart(this.cartItems());
+  }
 }
