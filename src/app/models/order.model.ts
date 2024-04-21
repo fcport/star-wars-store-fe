@@ -5,4 +5,5 @@ import { Vehicle } from './vehicles.model';
 export interface Order {
   items: CartItem<Starship | Vehicle>[];
   date: Date;
+  total: number;
 }
