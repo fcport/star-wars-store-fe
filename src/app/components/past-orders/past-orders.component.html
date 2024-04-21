@@ -1,1 +1,16 @@
-<pre class="text-white">{{ pastOrders() | json }}</pre>
+<div class="text-white">
+  @if (queryPastOrders.isPending()) { Loading... } @if (queryPastOrders.error())
+  { An error has occurred: {{ queryPastOrders.error()?.message }}
+  } @if (queryPastOrders.data(); as data) { @for (item of data ?? []; track
+  $index) {
+
+  <h1>{{ item.date }}</h1>
+  @for(cartItem of item.items; track $index){
+
+  <div class="flex flex-row w-full gap-4">
+    <b>{{ cartItem.name }}</b>
+    <b>{{ cartItem.qty }}</b>
+    <b> {{ cartItem.qty * cartItem.costInCredits! | currencyCredits }}</b>
+  </div>
+  } } }
+</div>

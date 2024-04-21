@@ -6,6 +6,10 @@ import { routes } from './app.routes';
 import { TuiAlertModule, TuiDialogModule, TuiRootModule } from '@taiga-ui/core';
 import { TuiPushModule } from '@taiga-ui/kit';
 import { provideHttpClient } from '@angular/common/http';
+import {
+  provideAngularQuery,
+  QueryClient,
+} from '@tanstack/angular-query-experimental';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,5 +22,6 @@ export const appConfig: ApplicationConfig = {
       TuiAlertModule,
       TuiPushModule
     ),
+    provideAngularQuery(new QueryClient()),
   ],
 };

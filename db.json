@@ -147,6 +147,176 @@
       ],
       "date": "2024-04-21T10:38:39.886Z",
       "total": 269998
+    },
+    {
+      "id": "3542",
+      "items": [
+        {
+          "objectId": "F5l2KSa4Xk",
+          "consumables": "1 week",
+          "name": "Y-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": null,
+          "crew": 2,
+          "length": 14,
+          "model": "BTL Y-wing",
+          "costInCredits": 134999,
+          "manufacturer": "Koensayr Manufacturing",
+          "MGLT": 80,
+          "starshipClass": "assault starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.113Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 3
+        }
+      ],
+      "date": "2024-04-21T12:02:11.914Z",
+      "total": 404997
+    },
+    {
+      "id": "ae57",
+      "items": [
+        {
+          "objectId": "F5l2KSa4Xk",
+          "consumables": "1 week",
+          "name": "Y-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": null,
+          "crew": 2,
+          "length": 14,
+          "model": "BTL Y-wing",
+          "costInCredits": 134999,
+          "manufacturer": "Koensayr Manufacturing",
+          "MGLT": 80,
+          "starshipClass": "assault starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.113Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 3
+        }
+      ],
+      "date": "2024-04-21T12:02:12.680Z",
+      "total": 404997
+    },
+    {
+      "id": "aa0c",
+      "items": [
+        {
+          "objectId": "F5l2KSa4Xk",
+          "consumables": "1 week",
+          "name": "Y-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": null,
+          "crew": 2,
+          "length": 14,
+          "model": "BTL Y-wing",
+          "costInCredits": 134999,
+          "manufacturer": "Koensayr Manufacturing",
+          "MGLT": 80,
+          "starshipClass": "assault starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.113Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 2
+        }
+      ],
+      "date": "2024-04-21T12:02:18.615Z",
+      "total": 269998
+    },
+    {
+      "id": "112f",
+      "items": [
+        {
+          "objectId": "F5l2KSa4Xk",
+          "consumables": "1 week",
+          "name": "Y-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": null,
+          "crew": 2,
+          "length": 14,
+          "model": "BTL Y-wing",
+          "costInCredits": 134999,
+          "manufacturer": "Koensayr Manufacturing",
+          "MGLT": 80,
+          "starshipClass": "assault starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.113Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 2
+        }
+      ],
+      "date": "2024-04-21T12:02:19.076Z",
+      "total": 269998
+    },
+    {
+      "id": "8b50",
+      "items": [
+        {
+          "objectId": "F5l2KSa4Xk",
+          "consumables": "1 week",
+          "name": "Y-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": null,
+          "crew": 2,
+          "length": 14,
+          "model": "BTL Y-wing",
+          "costInCredits": 134999,
+          "manufacturer": "Koensayr Manufacturing",
+          "MGLT": 80,
+          "starshipClass": "assault starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.113Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 2
+        }
+      ],
+      "date": "2024-04-21T12:02:20.543Z",
+      "total": 269998
     }
   ]
 }

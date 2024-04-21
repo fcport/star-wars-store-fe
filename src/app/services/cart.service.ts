@@ -112,10 +112,7 @@ export class CartService {
   }
 
   placeOrderCart(cartItems: CartItem<Starship | Vehicle>[]) {
-    this.ordersService
-      .placeOrder(cartItems)
-      .pipe(take(1))
-      .subscribe(console.log);
+    this.ordersService.placeOrder(cartItems);
 
     this.cart.update((cart) => {
       return [...cart];

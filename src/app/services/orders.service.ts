@@ -1,10 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { CartItem } from '../models/cart-item.model';
+import { Order } from '../models/order.model';
 import { Starship } from '../models/starship.model';
 import { Vehicle } from '../models/vehicles.model';
-import { HttpClient } from '@angular/common/http';
-import { Order } from '../models/order.model';
-import { toSignal } from '@angular/core/rxjs-interop';
+import {
+  injectMutation,
+  injectQuery,
+} from '@tanstack/angular-query-experimental';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -15,9 +20,26 @@ export class OrdersService {
 
   pastOrders = toSignal(this.getOrders());
 
+  queryPastOrders = injectQuery(() => ({
+    queryKey: ['orders', 'list'],
+    queryFn: () => lastValueFrom(this.getOrders()),
+  }));
+
+  mutatePastOrders = injectMutation((client) => ({
+    mutationFn: (order: CartItem<Starship | Vehicle>[]) =>
+      lastValueFrom(this.createOrder(order)),
+    // Invalidate and refetch by using the client directly
+    onSuccess: () => {
+      // ✅ refetch data
+      client.invalidateQueries({
+        queryKey: ['orders', 'list'],
+      });
+    },
+  }));
+
   constructor() {}
 
-  placeOrder(cart: CartItem<Starship | Vehicle>[]) {
+  createOrder(cart: CartItem<Starship | Vehicle>[]) {
     return this.httpClient.post(this.baseUrl, {
       items: cart,
       date: new Date(),
@@ -26,6 +48,10 @@ export class OrdersService {
         0
       ),
     });
+  }
+
+  placeOrder(cart: CartItem<Starship | Vehicle>[]) {
+    this.mutatePastOrders.mutate(cart);
   }
 
   getOrders() {

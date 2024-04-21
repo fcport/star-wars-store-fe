@@ -1,15 +1,16 @@
-import { Component, inject } from '@angular/core';
-import { OrdersService } from '../../services/orders.service';
 import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { CurrencyCreditsPipe } from '../../common/pipes/currency-credits.pipe';
+import { OrdersService } from '../../services/orders.service';
 
 @Component({
   selector: 'app-past-orders',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './past-orders.component.html',
   styleUrl: './past-orders.component.scss',
+  imports: [CommonModule, CurrencyCreditsPipe],
 })
 export class PastOrdersComponent {
   orderService = inject(OrdersService);
-  pastOrders = this.orderService.pastOrders;
+  queryPastOrders = this.orderService.queryPastOrders;
 }
