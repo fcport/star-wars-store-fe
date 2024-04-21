@@ -1,0 +1,17 @@
+<div class="grid grid-cols-3 gap-3">
+  <div
+    class="flex flex-row justify-between gap-3 cursor-pointer"
+    (click)="goToItemFn(cartItem())"
+  >
+    {{ cartItem().name }}
+  </div>
+  <div class="flex flex-row-reverse justify-between gap-3">
+    {{ cartItem().qty }}
+  </div>
+
+  @if(cartItem().costInCredits){
+  <div class="flex flex-row-reverse justify-between gap-3">
+    {{ cartItem().qty * cartItem().costInCredits! | currencyCredits }}
+  </div>
+  }
+</div>

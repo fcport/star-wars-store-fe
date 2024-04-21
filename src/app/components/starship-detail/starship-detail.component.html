@@ -65,10 +65,12 @@
         appearance="accent"
         tuiButton
         type="button"
-        [disabled]="!starship()?.costInCredits"
         class="tui-space_right-3 tui-space_bottom-3 my-4 w-full"
+        (click)="addToCart(starship()!)"
       >
-        >>> Add to cart <<<
+        {{
+          starship()?.costInCredits ? ">>> Add to cart <<<" : "Ask for a quote"
+        }}
       </button>
     </div>
   </div>

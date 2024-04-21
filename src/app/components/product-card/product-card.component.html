@@ -35,8 +35,9 @@
         appearance="accent"
         tuiHintAppearance="onDark"
         [tuiHint]="tooltipQuote"
+        (click)="addToCart(product())"
       >
-        {{ "Ask for a quote" }}
+        {{ "+ Ask for a quote" }}
       </button>
       <ng-template #tooltipQuote>
         <span class="text-sm"

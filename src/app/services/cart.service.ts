@@ -1,6 +1,7 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Starship } from '../models/starship.model';
 import { Vehicle } from '../models/vehicles.model';
+import { CartItem } from '../models/cart-item.model';
 
 @Injectable({
   providedIn: 'root',
@@ -34,5 +35,26 @@ export class CartService {
         JSON.stringify(this.itemsToAskForQuote())
       );
     }
+  }
+
+  reduceWithQuantity(items: (Starship | Vehicle)[]) {
+    return items.reduce(
+      (
+        acc: (CartItem<Starship> | CartItem<Vehicle>)[],
+        curr: Starship | Vehicle
+      ) => {
+        const indexFound = acc.findIndex(
+          (item) => item.objectId === curr.objectId
+        );
+
+        if (indexFound !== -1) {
+          acc[indexFound].qty += 1;
+        } else {
+          acc.push({ ...curr, qty: 1 });
+        }
+        return acc;
+      },
+      [] as (CartItem<Starship> | CartItem<Vehicle>)[]
+    );
   }
 }
