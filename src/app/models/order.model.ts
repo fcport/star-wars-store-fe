@@ -6,4 +6,5 @@ export interface Order {
   items: CartItem<Starship | Vehicle>[];
   date: Date;
   total: number;
+  id?: string;
 }

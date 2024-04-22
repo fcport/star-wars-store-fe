@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { CartItem } from '../models/cart-item.model';
-import { Order } from '../models/order.model';
-import { Starship } from '../models/starship.model';
-import { Vehicle } from '../models/vehicles.model';
 import {
   injectMutation,
   injectQuery,
 } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
+import { CartItem } from '../models/cart-item.model';
+import { Order } from '../models/order.model';
+import { Starship } from '../models/starship.model';
+import { Vehicle } from '../models/vehicles.model';
 
 @Injectable({
   providedIn: 'root',
@@ -30,7 +30,7 @@ export class OrdersService {
       lastValueFrom(this.createOrder(order)),
     // Invalidate and refetch by using the client directly
     onSuccess: () => {
-      // ✅ refetch data
+      // refetch data
       client.invalidateQueries({
         queryKey: ['orders', 'list'],
       });
@@ -40,7 +40,7 @@ export class OrdersService {
   constructor() {}
 
   createOrder(cart: CartItem<Starship | Vehicle>[]) {
-    return this.httpClient.post(this.baseUrl, {
+    return this.httpClient.post<Order>(this.baseUrl, {
       items: cart,
       date: new Date(),
       total: cart.reduce(

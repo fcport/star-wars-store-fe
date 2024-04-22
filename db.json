@@ -432,6 +432,250 @@
       ],
       "date": "2024-04-21T14:03:12.617Z",
       "total": 153889999
+    },
+    {
+      "id": "11a8",
+      "items": [
+        {
+          "objectId": "g9bAc5wnTN",
+          "consumables": "2 years",
+          "name": "Star Destroyer",
+          "cargoCapacity": 36000000,
+          "passengers": null,
+          "maxAtmospheringSpeed": 975,
+          "crew": null,
+          "length": null,
+          "model": "Imperial I-class Star Destroyer",
+          "costInCredits": 150000000,
+          "manufacturer": "Kuat Drive Yards",
+          "MGLT": 60,
+          "starshipClass": "Star Destroyer",
+          "hyperdriveRating": 2,
+          "createdAt": "2019-12-13T19:42:35.000Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 1
+        },
+        {
+          "objectId": "ERk3O2ELin",
+          "consumables": "1 week",
+          "name": "X-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": 1050,
+          "crew": 1,
+          "length": 12.5,
+          "model": "T-65 X-wing",
+          "costInCredits": 149999,
+          "manufacturer": "Incom Corporation",
+          "MGLT": 100,
+          "starshipClass": "Starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.109Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 1
+        }
+      ],
+      "date": "2024-04-22T06:45:17.849Z",
+      "total": 150149999
+    },
+    {
+      "id": "da1f",
+      "items": [
+        {
+          "objectId": "g9bAc5wnTN",
+          "consumables": "2 years",
+          "name": "Star Destroyer",
+          "cargoCapacity": 36000000,
+          "passengers": null,
+          "maxAtmospheringSpeed": 975,
+          "crew": null,
+          "length": null,
+          "model": "Imperial I-class Star Destroyer",
+          "costInCredits": 150000000,
+          "manufacturer": "Kuat Drive Yards",
+          "MGLT": 60,
+          "starshipClass": "Star Destroyer",
+          "hyperdriveRating": 2,
+          "createdAt": "2019-12-13T19:42:35.000Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 1
+        },
+        {
+          "objectId": "ERk3O2ELin",
+          "consumables": "1 week",
+          "name": "X-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": 1050,
+          "crew": 1,
+          "length": 12.5,
+          "model": "T-65 X-wing",
+          "costInCredits": 149999,
+          "manufacturer": "Incom Corporation",
+          "MGLT": 100,
+          "starshipClass": "Starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.109Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 1
+        }
+      ],
+      "date": "2024-04-22T06:45:51.159Z",
+      "total": 150149999
+    },
+    {
+      "id": "7416",
+      "items": [
+        {
+          "objectId": "g9bAc5wnTN",
+          "consumables": "2 years",
+          "name": "Star Destroyer",
+          "cargoCapacity": 36000000,
+          "passengers": null,
+          "maxAtmospheringSpeed": 975,
+          "crew": null,
+          "length": null,
+          "model": "Imperial I-class Star Destroyer",
+          "costInCredits": 150000000,
+          "manufacturer": "Kuat Drive Yards",
+          "MGLT": 60,
+          "starshipClass": "Star Destroyer",
+          "hyperdriveRating": 2,
+          "createdAt": "2019-12-13T19:42:35.000Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 1
+        },
+        {
+          "objectId": "ERk3O2ELin",
+          "consumables": "1 week",
+          "name": "X-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": 1050,
+          "crew": 1,
+          "length": 12.5,
+          "model": "T-65 X-wing",
+          "costInCredits": 149999,
+          "manufacturer": "Incom Corporation",
+          "MGLT": 100,
+          "starshipClass": "Starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.109Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 1
+        }
+      ],
+      "date": "2024-04-22T06:48:58.403Z",
+      "total": 150149999
+    },
+    {
+      "id": "95aa",
+      "items": [
+        {
+          "objectId": "g9bAc5wnTN",
+          "consumables": "2 years",
+          "name": "Star Destroyer",
+          "cargoCapacity": 36000000,
+          "passengers": null,
+          "maxAtmospheringSpeed": 975,
+          "crew": null,
+          "length": null,
+          "model": "Imperial I-class Star Destroyer",
+          "costInCredits": 150000000,
+          "manufacturer": "Kuat Drive Yards",
+          "MGLT": 60,
+          "starshipClass": "Star Destroyer",
+          "hyperdriveRating": 2,
+          "createdAt": "2019-12-13T19:42:35.000Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 6
+        },
+        {
+          "objectId": "ERk3O2ELin",
+          "consumables": "1 week",
+          "name": "X-wing",
+          "cargoCapacity": 110,
+          "passengers": 0,
+          "maxAtmospheringSpeed": 1050,
+          "crew": 1,
+          "length": 12.5,
+          "model": "T-65 X-wing",
+          "costInCredits": 149999,
+          "manufacturer": "Incom Corporation",
+          "MGLT": 100,
+          "starshipClass": "Starfighter",
+          "hyperdriveRating": 1,
+          "createdAt": "2019-12-13T19:42:35.109Z",
+          "updatedAt": "2019-12-13T19:42:37.828Z",
+          "pilots": {
+            "__type": "Relation",
+            "className": "Character"
+          },
+          "films": {
+            "__type": "Relation",
+            "className": "Film"
+          },
+          "qty": 1
+        }
+      ],
+      "date": "2024-04-22T06:49:24.625Z",
+      "total": 900149999
     }
   ]
 }
