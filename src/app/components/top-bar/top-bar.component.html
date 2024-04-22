@@ -1,6 +1,6 @@
 <div class="w-full flex flex-row h-12 bg-slate-400 justify-between fixed z-10">
   <div class="flex flex-row gap-3 justify-between w-full">
-    <div class="flex flex-row">
+    <div class="hidden md:flex flex-row">
       @for (item of items; track $index) {
       <a
         [routerLink]="[item.url]"
@@ -11,6 +11,14 @@
       </a>
       }
     </div>
+    <div
+      class="flex md:hidden my-auto mx-2 cursor-pointer"
+      (click)="toggleSidebar()"
+      (tuiActiveZoneChange)="toggleSidebar()"
+    >
+      <tui-svg src="tuiIconMenuLarge"></tui-svg>
+    </div>
+    <div *tuiSidebar="openSidebar; direction: 'left'">AAA</div>
 
     <a
       [routerLink]="['/cart']"
