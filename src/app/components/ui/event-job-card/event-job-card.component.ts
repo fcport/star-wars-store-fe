@@ -40,7 +40,6 @@ export class EventJobCardComponent {
   open = false;
 
   setAsTakenByUser(ev: any) {
-    console.log(ev.value);
     this.eventsService.acceptJob(this.job());
 
     this.open = false;

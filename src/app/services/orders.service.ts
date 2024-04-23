@@ -16,6 +16,7 @@ import { Vehicle } from '../models/vehicles.model';
 })
 export class OrdersService {
   baseUrl = 'http://localhost:3000/orders';
+  baseUrlQuotes = 'http://localhost:3000/quotesAsked';
   httpClient = inject(HttpClient);
 
   pastOrders = toSignal(this.getOrders());
@@ -56,5 +57,13 @@ export class OrdersService {
 
   getOrders() {
     return this.httpClient.get<Order[]>(this.baseUrl);
+  }
+
+  askForQuote(
+    items: (CartItem<Starship> | CartItem<Vehicle>)[],
+    name: string,
+    surname: string
+  ) {
+    throw new Error('Method not implemented.');
   }
 }

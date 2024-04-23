@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { TuiButtonModule } from '@taiga-ui/core';
 import { Router, RouterModule } from '@angular/router';
 import { CartItemComponent } from '../ui/cart-item/cart-item.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
@@ -20,6 +21,7 @@ import { CartItemComponent } from '../ui/cart-item/cart-item.component';
     TuiButtonModule,
     RouterModule,
     CartItemComponent,
+    FormsModule,
   ],
 })
 export class CartComponent {
@@ -61,5 +63,13 @@ export class CartComponent {
 
   placeOrder() {
     this.cartService.placeOrderCart(this.cartItems());
+  }
+
+  askForQuote(form: { name: string; surname: string }) {
+    this.cartService.askForQuote(
+      this.itemsToAskForQuote(),
+      form.name,
+      form.surname
+    );
   }
 }

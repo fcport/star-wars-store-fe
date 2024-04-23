@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TuiSidebarModule } from '@taiga-ui/addon-mobile';
-import { TuiSvgModule } from '@taiga-ui/core';
+import { TuiModeModule, TuiSvgModule } from '@taiga-ui/core';
 import { TuiBadgeModule } from '@taiga-ui/kit';
 import { CartService } from '../../services/cart.service';
 import { TuiActiveZoneModule } from '@taiga-ui/cdk';
@@ -15,6 +15,7 @@ import { TuiActiveZoneModule } from '@taiga-ui/cdk';
     TuiBadgeModule,
     TuiSidebarModule,
     TuiActiveZoneModule,
+    TuiModeModule,
   ],
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.scss',

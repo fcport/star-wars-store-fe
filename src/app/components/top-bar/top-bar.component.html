@@ -5,7 +5,7 @@
       <a
         [routerLink]="[item.url]"
         class="p-2 px-5 flex items-center align-center hover:bg-white transition-colors duration-500 ease-out hover:font-semibold"
-        [routerLinkActive]="'text-bakc bg-white font-semibold'"
+        [routerLinkActive]="'text-black bg-white font-semibold'"
       >
         {{ item.title }}
       </a>
@@ -18,7 +18,23 @@
     >
       <tui-svg src="tuiIconMenuLarge"></tui-svg>
     </div>
-    <div *tuiSidebar="openSidebar; direction: 'left'">AAA</div>
+    <div
+      *tuiSidebar="openSidebar; direction: 'left'"
+      class="flex flex-col h-full bg-gradient-to-t from-black to-yellow-500"
+    >
+      <div>
+        @for(item of items; track $index){
+        <a
+          [routerLink]="[item.url]"
+          class="p-2 px-5 flex items-center align-center hover:bg-slate-300 transition-colors duration-500 ease-out hover:font-semibold"
+          [routerLinkActive]="'text-black bg-slate-300 font-semibold'"
+        >
+          {{ item.title }}
+        </a>
+
+        }
+      </div>
+    </div>
 
     <a
       [routerLink]="['/cart']"

@@ -57,3 +57,44 @@
     </button>
   </section>
 </div>
+
+<ng-template
+  let-observer
+  [tuiDialogOptions]="{ label: 'About you', size: 's' }"
+  [(tuiDialog)]="open"
+>
+  <form
+    #quoteForm="ngForm"
+    class="flex flex-col gap-2"
+    (ngSubmit)="askForQuote(quoteForm.value)"
+  >
+    <p class="my-2">
+      Tell us your name and surname and we will send you the full contract
+    </p>
+    <tui-input name="name" id="name" ngModel tuiTextfield tuiAutoFocus required>
+      Name
+    </tui-input>
+    <tui-input
+      name="surname"
+      id="surname"
+      ngModel
+      tuiTextfield
+      tuiAutoFocus
+      required
+    >
+      Surname
+    </tui-input>
+    <p>
+      <button
+        tuiButton
+        appearance="outline"
+        [size]="'m'"
+        class="my-3 w-full"
+        type="submit"
+        [disabled]="!quoteForm.valid"
+      >
+        Send
+      </button>
+    </p>
+  </form>
+</ng-template>

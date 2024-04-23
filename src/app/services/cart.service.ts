@@ -115,8 +115,24 @@ export class CartService {
     this.ordersService.placeOrder(cartItems);
 
     this.cart.update((cart) => {
-      return [...cart];
+      return [];
     });
     localStorage.setItem('cart', JSON.stringify(this.cart()));
+  }
+
+  askForQuote(
+    items: (CartItem<Starship> | CartItem<Vehicle>)[],
+    name: string,
+    surname: string
+  ) {
+    this.ordersService.askForQuote(items, name, surname);
+
+    this.itemsToAskForQuote.update((itemsQuote) => {
+      return [];
+    });
+    localStorage.setItem(
+      'itemsToAskForQuote',
+      JSON.stringify(this.itemsToAskForQuote())
+    );
   }
 }
